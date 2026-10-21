@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Location | M. Naib Master Bespoke Tailors - Kohat City, KPK</title>
+  <meta name="description" content="Contact Master M. Naib in Kohat City, KPK. Call or WhatsApp 0336988499. Shop location, hours, and direct online stitching inquiry form.">
+  
+  <!-- Fonts: Outfit (Luxury Modern UI & Headings) + Plus Jakarta Sans + Noto Nastaliq Urdu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){try{var t=localStorage.getItem('taylor_active_theme')||'gold';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  </script>
+</head>
+<body>
+  <!-- Top Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- =========================================================================
+       0. TOP COLOR THEME CONTROLLER (CYCLE 3 RICH COLOR THEMES)
+       ========================================================================= -->
+  <div class="theme-top-bar" id="themeTopBar">
+    <div class="container theme-top-container">
+      <div class="theme-info-side">
+        <span class="theme-pulse-dot"></span>
+        <span class="theme-bar-label" data-i18n="theme_bar_label">Website Color:</span>
+        <span class="theme-badge-name" id="themeBadgeName">1. Royal Gold (شاہی سنہری)</span>
+      </div>
+
+      <div class="theme-actions-side">
+        <!-- 3-in-1 Cycle Theme Button -->
+        <button type="button" class="theme-cycle-button" id="themeCycleBtn" onclick="cycleTheme()" aria-label="Change Website Color (3 Themes)" title="Click to cycle 3 colors">
+          <i class="fa-solid fa-palette theme-palette-icon"></i>
+          <span class="theme-btn-title" data-i18n="theme_btn_title">Change Color</span>
+          <div class="theme-dots-row" aria-hidden="true">
+            <span class="theme-dot dot-gold active" onclick="event.stopPropagation(); setTheme('gold')" title="1. Royal Gold (شاہی سنہری)"></span>
+            <span class="theme-dot dot-emerald" onclick="event.stopPropagation(); setTheme('emerald')" title="2. Emerald Green (زمرد سبز)"></span>
+            <span class="theme-dot dot-sapphire" onclick="event.stopPropagation(); setTheme('sapphire')" title="3. Sapphire Blue (شاہی نیلا)"></span>
+          </div>
+          <span class="theme-counter-tag" id="themeCounterTag">1 / 3</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Info Bar -->
+  <header class="top-bar-module">
+    <div class="container top-bar-container">
+      <div class="top-bar-location">
+        <i class="fa-solid fa-location-dot gold-text"></i>
+        <span data-i18n="top_location">Kohat City, Khyber Pakhtunkhwa (KPK), Pakistan</span>
+      </div>
+      <div class="top-bar-schedule">
+        <i class="fa-regular fa-clock gold-text"></i>
+        <span data-i18n="top_schedule">Sat – Thu: 9:00 AM – 9:00 PM | Fri: 3:00 PM – 9:00 PM</span>
+      </div>
+      <div class="top-bar-contact">
+        <div class="lang-switcher-pill" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="en" onclick="setLanguage('en')">English</button>
+          <span class="lang-divider">|</span>
+          <button type="button" class="lang-btn" data-lang="ur" onclick="setLanguage('ur')">اردو</button>
+        </div>
+        <a href="tel:0336988499" class="top-bar-phone">
+          <i class="fa-solid fa-phone"></i>
+          <span>0336-988499</span>
+        </a>
+        <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.Naib,%20I%20want%20to%20visit%20your%20shop." target="_blank" class="top-bar-whatsapp" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="top_whatsapp">WhatsApp Chat</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Level Navbar -->
+  <nav class="navbar-module" id="mainNavbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="nav-brand-block" aria-label="M. Naib Tailors Home">
+        <div class="nav-brand-monogram">
+          <span class="monogram-letters">MN</span>
+          <div class="scissors-badge"><i class="fa-solid fa-scissors"></i></div>
+        </div>
+        <div class="nav-brand-text">
+          <div class="nav-brand-title">
+            <span class="brand-title-en">M. NAIB</span>
+            <span class="nav-urdu-pill">ماسٹر نائب</span>
+          </div>
+          <span class="nav-brand-caption" data-i18n="brand_sub">MASTER BESPOKE TAILORS &bull; KOHAT</span>
+        </div>
+      </a>
+
+      <div class="nav-menu-list" id="navMenuList">
+        <a href="index.html" class="nav-link-item" data-i18n="nav_home">Home</a>
+        <a href="services.html" class="nav-link-item" data-i18n="nav_services">Services</a>
+        <a href="order.html" class="nav-link-item" data-i18n="nav_order">Naap &amp; Order</a>
+        <a href="rates.html" class="nav-link-item" data-i18n="nav_rates">Rate List</a>
+        <a href="about.html" class="nav-link-item" data-i18n="nav_about">Our Craft</a>
+        <a href="contact.html" class="nav-link-item active" data-i18n="nav_contact">Contact &amp; Shop</a>
+      </div>
+
+      <div class="nav-cta-block">
+        <a href="order.html" class="nav-btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="nav_book">Book Order</span>
+        </a>
+        <button class="nav-hamburger-btn" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <span class="bar-line"></span>
+          <span class="bar-line"></span>
+          <span class="bar-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="page-header-module">
+    <div class="container">
+      <div class="page-breadcrumb">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <span class="crumb-sep">/</span>
+        <span data-i18n="nav_contact">Contact &amp; Shop</span>
+      </div>
+      <h1 class="page-main-heading" data-i18n="page_contact_heading">Visit Our Shop in Kohat City</h1>
+      <p class="page-tagline" data-i18n="page_contact_tagline">
+        Have a special cut in mind or want your measurements taken in person? Visit Master M. Naib in Kohat City or message us on WhatsApp (0336-988499).
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact & Location Grid -->
+  <section class="contact-module" id="contact">
+    <div class="container">
+
+      <div class="contact-layout-grid">
+        
+        <!-- Info Cards Column -->
+        <div class="contact-info-column">
+          
+          <!-- Shop Reception & Counter Image Display -->
+          <div class="shop-counter-feature-card">
+            <div class="counter-feature-img-frame">
+              <img src="assets/images/shop_counter.jpg" alt="M. Naib Tailor Shop Counter in Kohat City KPK" class="counter-feature-img">
+            </div>
+            <div class="counter-feature-tag">
+              <i class="fa-solid fa-store gold-text"></i>
+              <span data-i18n="counter_feature_title">Master Cutting &amp; Reception Counter &bull; Kohat City Shop</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="tile-content">
+              <h4 data-i18n="floating_tag_role">Master Craftsman &bull; Kohat City</h4>
+              <p class="tile-highlight" data-i18n="floating_tag_name">Master M. Naib</p>
+              <span>Chief Cutter &amp; Bespoke Consultant</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="tile-content">
+              <h4 data-i18n="contact_phone_title">Phone Contact</h4>
+              <a href="tel:0336988499" class="tile-highlight link-gold">0336-988499</a>
+              <span>Available for direct calls &amp; urgent orders</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="tile-content">
+              <h4>WhatsApp Instant Chat</h4>
+              <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.%20Naib,%20I%20want%20to%20discuss%20stitching." target="_blank" class="tile-highlight link-gold" rel="noopener">0336-988499</a>
+              <span>Send photos of cloth, designs &amp; sizes anytime</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="tile-content">
+              <h4 data-i18n="contact_loc_title">Shop Location</h4>
+              <p class="tile-highlight" data-i18n="contact_loc_desc">Kohat City Center, KPK, Pakistan</p>
+              <span>Easily accessible central location in Kohat City</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div class="tile-content">
+              <h4 data-i18n="contact_hours_title">Shop Working Hours</h4>
+              <p class="tile-highlight" data-i18n="contact_hours_desc">Sat – Thu: 9:00 AM – 9:00 PM | Fri: 3:00 PM – 9:00 PM</p>
+              <span>Friday: 3:00 PM – 9:00 PM (After Juma)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Inquiry Form Column -->
+        <div class="contact-form-column">
+          <div class="inquiry-form-card">
+            <h3 class="inquiry-title" data-i18n="inquiry_form_title">Send Direct Inquiry</h3>
+            <p class="inquiry-subtitle" data-i18n="inquiry_form_sub">Master M. Naib will respond promptly on WhatsApp.</p>
+
+            <form id="contactInquiryForm" onsubmit="handleDirectInquiry(event)">
+              <div class="ui-form-group">
+                <label for="inqName" data-i18n="inq_lbl_name">Your Name *</label>
+                <input type="text" id="inqName" required placeholder="e.g. Tariq Khan" data-i18n-ph="ph_name" class="form-text-input">
+              </div>
+
+              <div class="ui-form-group">
+                <label for="inqPhone" data-i18n="inq_lbl_phone">Your WhatsApp or Phone Number *</label>
+                <input type="tel" id="inqPhone" required placeholder="0336-988499" data-i18n-ph="ph_phone" class="form-text-input">
+              </div>
+
+              <div class="ui-form-group">
+                <label for="inqGarment" data-i18n="inq_lbl_garment">Garment Needed</label>
+                <select id="inqGarment" class="form-text-input">
+                  <option value="Men's Shalwar Kameez">Men's Shalwar Kameez (شلوار قمیض)</option>
+                  <option value="Executive Waistcoat">Executive Waistcoat (واسکٹ)</option>
+                  <option value="Bespoke Suit (2-Piece / 3-Piece)">Bespoke Suit (کوٹ پینٹ)</option>
+                  <option value="Kurta Pajama">Kurta Pajama (کرتا پاجامہ)</option>
+                  <option value="Prince Coat / Sherwani">Prince Coat / Sherwani (پرنس کوٹ)</option>
+                  <option value="Urgent Alteration">Urgent Alteration / Fitting</option>
+                </select>
+              </div>
+
+              <div class="ui-form-group">
+                <label for="inqMessage" data-i18n="inq_lbl_msg">Your Message / Requirements</label>
+                <textarea id="inqMessage" rows="3" placeholder="Tell us about your fabric, event date or specific requirements..." data-i18n-ph="ph_notes" class="form-text-input"></textarea>
+              </div>
+
+              <button type="submit" class="submit-inquiry-btn">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-i18n="inq_btn_submit">Send via WhatsApp (0336-988499) &rarr;</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-module">
+    <div class="container">
+      <div class="footer-top-columns">
+        <div class="footer-identity-col">
+          <div class="footer-brand-title">
+            <i class="fa-solid fa-scissors gold-text"></i>
+            <span>M. NAIB TAILORS</span>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer_desc">
+            Excellence in bespoke men's tailoring, traditional Shalwar Kameez, Waistcoats, and Suits. Serving gentlemen across Kohat City and Khyber Pakhtunkhwa.
+          </p>
+          <div class="footer-urdu-tag">
+            <span>ماسٹر نائب ٹیلرز • کوہاٹ شہر، خیبر پختونخوا</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-header" data-i18n="footer_quick">Quick Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav_services">All Services</a></li>
+            <li><a href="order.html" data-i18n="nav_order">Online Naap Form</a></li>
+            <li><a href="rates.html" data-i18n="nav_rates">Stitching Rate List</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About Master Naib</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact &amp; Shop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4 class="footer-col-header" data-i18n="footer_contact_hdr">Contact &amp; Atelier</h4>
+          <div class="footer-contact-details">
+            <p><i class="fa-solid fa-user-tie gold-text"></i> <strong>Master M. Naib</strong></p>
+            <p><i class="fa-solid fa-phone gold-text"></i> <a href="tel:0336988499">0336-988499</a></p>
+            <p><i class="fa-brands fa-whatsapp gold-text"></i> <a href="https://wa.me/92336988499" target="_blank" rel="noopener">0336-988499</a></p>
+            <p><i class="fa-solid fa-location-dot gold-text"></i> Kohat City, KPK, Pakistan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p data-i18n="footer_copy">&copy; 2026 M. Naib Tailors, Kohat City KPK. All rights reserved.</p>
+        <div class="footer-status-pill">
+          <span data-i18n="footer_status">Kohat City Atelier Active</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Bar -->
+  <div class="mobile-bar-module" id="mobileActionBar">
+    <a href="tel:0336988499" class="m-float-action m-action-call">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call 0336-988499</span>
+    </a>
+    <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.%20Naib,%20I%20want%20to%20place%20an%20order." target="_blank" class="m-float-action m-action-whatsapp" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp Order</span>
+    </a>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="app.js"></script>
+</body>
+</html>

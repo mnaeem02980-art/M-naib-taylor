@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M. Naib Tailors | Master Bespoke Tailoring - Kohat City, KPK</title>
+  <meta name="description" content="M. Naib Tailors in Kohat City, KPK. Master craftsmanship for bespoke Men's Shalwar Kameez, Executive Waistcoats, Kurta, Prince Coats, and Bespoke Suits. Call or WhatsApp 0336988499.">
+  <meta name="keywords" content="M Naib Tailors, Taylor Kohat, Tailor Shop Kohat City, KPK Tailor, Shalwar Kameez Stitching Kohat, Bespoke Suit Kohat, Waistcoat Stitching KPK">
+  <meta name="author" content="Master M. Naib">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="M. Naib Tailors - Bespoke Craftsmanship, Kohat City KPK">
+  <meta property="og:description" content="Master bespoke tailoring for Men's Shalwar Kameez, Waistcoats, and Suits. Perfect fit guaranteed. Contact 0336988499.">
+  <meta property="og:type" content="business.business">
+  <meta property="og:image" content="assets/images/hero_tailor.jpg">
+
+  <!-- Google Fonts: Outfit (Luxury Modern UI & Headings) + Plus Jakarta Sans + Noto Nastaliq Urdu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){try{var t=localStorage.getItem('taylor_active_theme')||'gold';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  </script>
+</head>
+<body>
+  <!-- Top Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- =========================================================================
+       0. TOP COLOR THEME CONTROLLER (CYCLE 3 RICH COLOR THEMES)
+       ========================================================================= -->
+  <div class="theme-top-bar" id="themeTopBar">
+    <div class="container theme-top-container">
+      <div class="theme-info-side">
+        <span class="theme-pulse-dot"></span>
+        <span class="theme-bar-label" data-i18n="theme_bar_label">Website Color:</span>
+        <span class="theme-badge-name" id="themeBadgeName">1. Royal Gold (شاہی سنہری)</span>
+      </div>
+
+      <div class="theme-actions-side">
+        <!-- 3-in-1 Cycle Theme Button -->
+        <button type="button" class="theme-cycle-button" id="themeCycleBtn" onclick="cycleTheme()" aria-label="Change Website Color (3 Themes)" title="Click to cycle 3 colors">
+          <i class="fa-solid fa-palette theme-palette-icon"></i>
+          <span class="theme-btn-title" data-i18n="theme_btn_title">Change Color</span>
+          <div class="theme-dots-row" aria-hidden="true">
+            <span class="theme-dot dot-gold active" onclick="event.stopPropagation(); setTheme('gold')" title="1. Royal Gold (شاہی سنہری)"></span>
+            <span class="theme-dot dot-emerald" onclick="event.stopPropagation(); setTheme('emerald')" title="2. Emerald Green (زمرد سبز)"></span>
+            <span class="theme-dot dot-sapphire" onclick="event.stopPropagation(); setTheme('sapphire')" title="3. Sapphire Blue (شاہی نیلا)"></span>
+          </div>
+          <span class="theme-counter-tag" id="themeCounterTag">1 / 3</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       1. TOP INFO BAR CLASS: .top-bar-module
+       ========================================================================= -->
+  <header class="top-bar-module">
+    <div class="container top-bar-container">
+      <div class="top-bar-location">
+        <i class="fa-solid fa-location-dot gold-text"></i>
+        <span data-i18n="top_location">Kohat City, Khyber Pakhtunkhwa (KPK), Pakistan</span>
+      </div>
+      <div class="top-bar-schedule">
+        <i class="fa-regular fa-clock gold-text"></i>
+        <span data-i18n="top_schedule">Sat – Thu: 9:00 AM – 9:00 PM | Fri: 3:00 PM – 9:00 PM</span>
+      </div>
+      <div class="top-bar-contact">
+        <div class="lang-switcher-pill" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="en" onclick="setLanguage('en')">English</button>
+          <span class="lang-divider">|</span>
+          <button type="button" class="lang-btn" data-lang="ur" onclick="setLanguage('ur')">اردو</button>
+        </div>
+        <a href="tel:0336988499" class="top-bar-phone">
+          <i class="fa-solid fa-phone"></i>
+          <span>0336-988499</span>
+        </a>
+        <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.Naib,%20I%20would%20like%20to%20inquire%20about%20stitching." target="_blank" class="top-bar-whatsapp" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="top_whatsapp">WhatsApp Chat</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. REFINED NAVBAR CLASS: .navbar-module
+       ========================================================================= -->
+  <nav class="navbar-module" id="mainNavbar">
+    <div class="container navbar-container">
+      
+      <!-- Logo Branding Block -->
+      <a href="index.html" class="nav-brand-block" aria-label="M. Naib Tailors Home">
+        <div class="nav-brand-monogram">
+          <span class="monogram-letters">MN</span>
+          <div class="scissors-badge"><i class="fa-solid fa-scissors"></i></div>
+        </div>
+        <div class="nav-brand-text">
+          <div class="nav-brand-title">
+            <span class="brand-title-en">M. NAIB</span>
+            <span class="nav-urdu-pill">ماسٹر نائب</span>
+          </div>
+          <span class="nav-brand-caption" data-i18n="brand_sub">MASTER BESPOKE TAILORS &bull; KOHAT</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <div class="nav-menu-list" id="navMenuList">
+        <a href="index.html" class="nav-link-item active" data-i18n="nav_home">Home</a>
+        <a href="services.html" class="nav-link-item" data-i18n="nav_services">Services</a>
+        <a href="order.html" class="nav-link-item" data-i18n="nav_order">Naap &amp; Order</a>
+        <a href="rates.html" class="nav-link-item" data-i18n="nav_rates">Rate List</a>
+        <a href="about.html" class="nav-link-item" data-i18n="nav_about">Our Craft</a>
+        <a href="contact.html" class="nav-link-item" data-i18n="nav_contact">Contact &amp; Shop</a>
+      </div>
+
+      <!-- Action Buttons Block -->
+      <div class="nav-cta-block">
+        <a href="order.html" class="nav-btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="nav_book">Book Order</span>
+        </a>
+        <button class="nav-hamburger-btn" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <span class="bar-line"></span>
+          <span class="bar-line"></span>
+          <span class="bar-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       3. HERO SECTION CLASS: .hero-module
+       ========================================================================= -->
+  <section class="hero-module" id="home">
+    <div class="hero-radial-glow"></div>
+    <div class="container hero-container">
+      
+      <div class="hero-content-column">
+        <div class="hero-tag-badge">
+          <span class="badge-status-dot"></span>
+          <span data-i18n="hero_tag">MASTER TAILOR SHOP &bull; KOHAT CITY</span>
+          <span class="urdu-pill">ماسٹر نائب ٹیلرز</span>
+        </div>
+        
+        <h1 class="hero-main-title" data-i18n="hero_title">
+          Expert Tailoring &amp; <span class="gold-gradient-text">Guaranteed Perfect Fit</span>.
+        </h1>
+        
+        <p class="hero-subtext" data-i18n="hero_subtext">
+          Led by <strong>Master M. Naib</strong> in Kohat City, KPK. Expert cutting and stitching for traditional Shalwar Kameez, Waistcoats, and 2-Piece English Suits. 100% comfortable, flawless fitting guaranteed.
+        </p>
+
+        <!-- Highlights Row -->
+        <div class="hero-perks-grid">
+          <div class="perk-box">
+            <i class="fa-solid fa-circle-check perk-icon"></i>
+            <span data-i18n="hero_perk_1">100% Guaranteed Fit</span>
+          </div>
+          <div class="perk-box">
+            <i class="fa-solid fa-circle-check perk-icon"></i>
+            <span data-i18n="hero_perk_2">Imported Anti-Bubble Bukram</span>
+          </div>
+          <div class="perk-box">
+            <i class="fa-solid fa-circle-check perk-icon"></i>
+            <span data-i18n="hero_perk_3">Strict Timely Delivery</span>
+          </div>
+          <div class="perk-box">
+            <i class="fa-solid fa-circle-check perk-icon"></i>
+            <span data-i18n="hero_perk_4">24-48h Urgent Express Service</span>
+          </div>
+        </div>
+
+        <!-- Call to actions -->
+        <div class="hero-buttons-row">
+          <a href="order.html" class="btn-action-primary">
+            <i class="fa-solid fa-ruler-combined"></i>
+            <span data-i18n="hero_btn_order">Send Measurements (ناپ)</span>
+          </a>
+          <a href="tel:0336988499" class="btn-action-secondary">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call 0336-988499</span>
+          </a>
+        </div>
+
+        <!-- Trust Stats Bar -->
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <span class="metric-value">100%</span>
+            <span class="metric-label" data-i18n="metric_fit">Fit Guarantee</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-value">Kohat</span>
+            <span class="metric-label" data-i18n="metric_shop">City Center Shop</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-value">24-48h</span>
+            <span class="metric-label" data-i18n="metric_turnaround">Urgent Turnaround</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Image Frame -->
+      <div class="hero-visual-column">
+        <div class="hero-showcase-frame">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/young_tailor.jpg" alt="Master M. Naib - Young Master Bespoke Tailor in Kohat City KPK" class="hero-showcase-image">
+          </div>
+          <div class="hero-craft-floating-tag">
+            <div class="floating-tag-icon">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <div class="floating-tag-text">
+              <strong data-i18n="floating_tag_name">Master M. Naib</strong>
+              <span data-i18n="floating_tag_role">Master Craftsman &bull; Kohat City</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. SERVICES SECTION CLASS: .services-module
+       ========================================================================= -->
+  <section class="services-module" id="services">
+    <div class="container">
+      
+      <div class="section-title-block text-center">
+        <span class="section-label" data-i18n="services_label">SPECIALIZED SERVICES</span>
+        <h2 class="section-heading" data-i18n="services_heading">Master Tailoring Services</h2>
+        <div class="gold-rule-line"></div>
+        <p class="section-description" data-i18n="services_desc">
+          From executive daily wear Shalwar Kameez to regal wedding Prince Coats, Master M. Naib delivers perfection in every stitch.
+        </p>
+      </div>
+
+      <div class="services-cards-grid">
+        
+        <!-- Card 1: Shalwar Kameez -->
+        <div class="service-box">
+          <div class="service-box-header">
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-vest"></i>
+            </div>
+            <span class="service-badge-pill" data-i18n="srv_sk_badge">Signature Craft</span>
+          </div>
+          <h3 class="service-box-title" data-i18n="srv_sk_title">Traditional Shalwar Kameez</h3>
+          <p class="service-box-desc" data-i18n="srv_sk_desc">
+            Authentic Pakistani &amp; KPK cuts. Single or double-needle stitching, Sherwani Ban collar, French collar, shirt cuffs, round or square daman, and concealed plackets.
+          </p>
+          <ul class="service-box-list">
+            <li><i class="fa-solid fa-check"></i> High-density thread &amp; crisp Bukram ban</li>
+            <li><i class="fa-solid fa-check"></i> Mobile pocket &amp; reinforced side pockets</li>
+            <li><i class="fa-solid fa-check"></i> Custom fall &amp; drape for wash &amp; wear, latha, cotton</li>
+          </ul>
+          <div class="service-box-footer">
+            <span class="delivery-time-tag"><i class="fa-regular fa-clock"></i> 3 - 5 Days</span>
+            <button class="service-order-btn" onclick="selectServiceForOrder('Shalwar Kameez')" data-i18n="btn_order_now">Order Now &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Card 2: Executive Waistcoat -->
+        <div class="service-box featured-box">
+          <div class="service-box-header">
+            <div class="service-icon-wrap gold-icon-bg">
+              <i class="fa-solid fa-vest-patches"></i>
+            </div>
+            <span class="service-badge-pill gold-pill" data-i18n="srv_waskat_badge">Executive Class</span>
+          </div>
+          <h3 class="service-box-title" data-i18n="srv_waskat_title">Executive Waistcoats (Waskat)</h3>
+          <p class="service-box-desc" data-i18n="srv_waskat_desc">
+            Tailored waistcoats designed to command presence. Custom canvas interlining, hand-stitched edging, antique brass or metallic buttons, and silky inner lining.
+          </p>
+          <ul class="service-box-list">
+            <li><i class="fa-solid fa-check"></i> Structured shoulder line &amp; chest curvature</li>
+            <li><i class="fa-solid fa-check"></i> Jetted welt pockets &amp; pocket square slot</li>
+            <li><i class="fa-solid fa-check"></i> Expert tailoring for Jamawar, Raw Silk &amp; Woolens</li>
+          </ul>
+          <div class="service-box-footer">
+            <span class="delivery-time-tag"><i class="fa-regular fa-clock"></i> 4 - 6 Days</span>
+            <button class="service-order-btn" onclick="selectServiceForOrder('Executive Waistcoat')" data-i18n="btn_order_now">Order Now &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Card 3: Bespoke Suits -->
+        <div class="service-box">
+          <div class="service-box-header">
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <span class="service-badge-pill" data-i18n="srv_suit_badge">Master Tailored</span>
+          </div>
+          <h3 class="service-box-title" data-i18n="srv_suit_title">Bespoke 2-Piece &amp; 3-Piece Suits</h3>
+          <p class="service-box-desc" data-i18n="srv_suit_desc">
+            Sartorial English &amp; Italian cut suits tailored to your exact physique. Notch or peak lapels, tailored trousers with crisp creases, and flawless chest drape.
+          </p>
+          <ul class="service-box-list">
+            <li><i class="fa-solid fa-check"></i> Hand-basted horsehair chest canvas</li>
+            <li><i class="fa-solid fa-check"></i> Customized lapel width &amp; vent styling</li>
+            <li><i class="fa-solid fa-check"></i> Ideal for corporate, interviews &amp; formal events</li>
+          </ul>
+          <div class="service-box-footer">
+            <span class="delivery-time-tag"><i class="fa-regular fa-clock"></i> 7 - 10 Days</span>
+            <button class="service-order-btn" onclick="selectServiceForOrder('Bespoke Suit')" data-i18n="btn_order_now">Order Now &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Card 4: Prince Coat & Sherwani -->
+        <div class="service-box">
+          <div class="service-box-header">
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <span class="service-badge-pill" data-i18n="srv_prince_badge">Royal Heritage</span>
+          </div>
+          <h3 class="service-box-title" data-i18n="srv_prince_title">Prince Coats &amp; Sherwanis</h3>
+          <p class="service-box-desc" data-i18n="srv_prince_desc">
+            Regal wedding attire stitched for grooms and ceremonial occasions. Flawless symmetry, ornamental button loops, and grand royal silhouette.
+          </p>
+          <ul class="service-box-list">
+            <li><i class="fa-solid fa-check"></i> Master royal cuts &amp; stiff regal collars</li>
+            <li><i class="fa-solid fa-check"></i> Custom inner lining &amp; pocket structuring</li>
+            <li><i class="fa-solid fa-check"></i> Trial fitting session included</li>
+          </ul>
+          <div class="service-box-footer">
+            <span class="delivery-time-tag"><i class="fa-regular fa-clock"></i> 7 - 12 Days</span>
+            <button class="service-order-btn" onclick="selectServiceForOrder('Prince Coat')" data-i18n="btn_order_now">Order Now &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Card 5: Kurta Pajama -->
+        <div class="service-box">
+          <div class="service-box-header">
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-shirt"></i>
+            </div>
+            <span class="service-badge-pill" data-i18n="srv_kurta_badge">Modern Cut</span>
+          </div>
+          <h3 class="service-box-title" data-i18n="srv_kurta_title">Kurta &amp; Pajama / Trouser</h3>
+          <p class="service-box-desc" data-i18n="srv_kurta_desc">
+            Comfortable, crisp cotton, linen, and latha kurtas tailored with easy-breath styling. Ideal for Juma prayer, Eid celebrations, and summer warmth.
+          </p>
+          <ul class="service-box-list">
+            <li><i class="fa-solid fa-check"></i> Open sleeves or buttoned wrist cuffs</li>
+            <li><i class="fa-solid fa-check"></i> Soft collar interlining for all-day comfort</li>
+            <li><i class="fa-solid fa-check"></i> Gool ya Choras daman finishing</li>
+          </ul>
+          <div class="service-box-footer">
+            <span class="delivery-time-tag"><i class="fa-regular fa-clock"></i> 3 - 4 Days</span>
+            <button class="service-order-btn" onclick="selectServiceForOrder('Kurta Trouser')" data-i18n="btn_order_now">Order Now &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Card 6: Urgent Express -->
+        <div class="service-box">
+          <div class="service-box-header">
+            <div class="service-icon-wrap red-icon-bg">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <span class="service-badge-pill urgent-pill" data-i18n="srv_urgent_badge">Express 24-48h</span>
+          </div>
+          <h3 class="service-box-title" data-i18n="srv_urgent_title">Urgent Stitching &amp; Alterations</h3>
+          <p class="service-box-desc" data-i18n="srv_urgent_desc">
+            Got an emergency wedding invitation or immediate travel from Kohat? Our express stitching line delivers your outfit in record time with zero compromise on quality.
+          </p>
+          <ul class="service-box-list">
+            <li><i class="fa-solid fa-check"></i> 24 to 48 Hours express turnaround</li>
+            <li><i class="fa-solid fa-check"></i> Suit, Trouser &amp; Kameez fitting alterations</li>
+            <li><i class="fa-solid fa-check"></i> Priority workbench dedication</li>
+          </ul>
+          <div class="service-box-footer">
+            <span class="delivery-time-tag"><i class="fa-regular fa-clock"></i> 24 - 48 Hours</span>
+            <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.%20Naib,%20I%20urgently%20need%20express%20stitching%20service." target="_blank" class="service-order-btn urgent-text" rel="noopener">Urgent Request &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. CRAFTSMANSHIP & ATELIER SHOWCASE CLASS: .craft-module
+       ========================================================================= -->
+  <section class="craft-module" id="craft">
+    <div class="container craft-layout-grid">
+      
+      <div class="craft-details-column">
+        <span class="section-label" data-i18n="craft_section_label">BESPOKE EXCELLENCE</span>
+        <h2 class="section-heading" data-i18n="craft_section_heading">The Art of Master M. Naib</h2>
+        <div class="gold-rule-line left-aligned"></div>
+        
+        <p class="craft-intro-text" data-i18n="craft_intro">
+          With over a decade of hands-on atelier mastery in Kohat City, Master M. Naib has built a sterling reputation among executives, scholars, and wedding parties. We reject generic mass-stitching in favor of individual anatomical draping.
+        </p>
+        
+        <div class="craft-features-list">
+          <div class="craft-feature-item">
+            <div class="feature-number-badge">01</div>
+            <div class="feature-text-body">
+              <h4 data-i18n="craft_feat_1_title">Anatomical Pattern Cutting</h4>
+              <p data-i18n="craft_feat_1_desc">Every cloth pattern is drafted according to shoulder slope, chest curvature, and posture to prevent fabric pulling and wrinkles.</p>
+            </div>
+          </div>
+
+          <div class="craft-feature-item">
+            <div class="feature-number-badge">02</div>
+            <div class="feature-text-body">
+              <h4 data-i18n="craft_feat_2_title">Thermo-Fused Anti-Bubble Bukram</h4>
+              <p data-i18n="craft_feat_2_desc">We strictly import high-grade interlinings to ensure collars and cuffs stay razor-sharp wash after wash.</p>
+            </div>
+          </div>
+
+          <div class="craft-feature-item">
+            <div class="feature-number-badge">03</div>
+            <div class="feature-text-body">
+              <h4 data-i18n="craft_feat_3_title">Reinforced Pocket &amp; Button Anchor</h4>
+              <p data-i18n="craft_feat_3_desc">Double-reinforced pocket corners and hand-stitched anchor knots that never tear under daily smartphone weight.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="craft-contact-callout">
+          <div class="callout-text">
+            <strong>Need advice on fabric length or quality?</strong>
+            <span>Call Master M. Naib directly for fabric consultation.</span>
+          </div>
+          <a href="tel:0336988499" class="callout-call-btn">
+            <i class="fa-solid fa-phone"></i>
+            <span>0336-988499</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="craft-images-column">
+        <div class="craft-stacked-cards">
+          <div class="craft-card-top">
+            <img src="assets/images/shop_counter.jpg" alt="M. Naib Tailor Shop Reception and Order Counter in Kohat City KPK" class="craft-img">
+            <div class="craft-img-caption">
+              <span data-i18n="counter_feature_title">Master Cutting &amp; Reception Counter &bull; Kohat City Shop</span>
+            </div>
+          </div>
+          <div class="craft-card-bottom">
+            <img src="assets/images/hero_tailor.jpg" alt="Master bespoke traditional Shalwar Kameez and Waistcoat" class="craft-img">
+            <div class="craft-img-caption">
+              <span>Handcrafted Shalwar Kameez &amp; Executive Waistcoats</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. INTERACTIVE MEASUREMENT WORKBENCH CLASS: .measurement-module
+       ========================================================================= -->
+  <section class="measurement-module" id="measurement">
+    <div class="container">
+      
+      <div class="section-title-block text-center">
+        <span class="section-label" data-i18n="nav_order">DIGITAL NAAP &amp; ORDER</span>
+        <h2 class="section-heading" data-i18n="page_order_heading">Online Measurement Form (ناپ فارم)</h2>
+        <div class="gold-rule-line"></div>
+        <p class="section-description" data-i18n="page_order_tagline">
+          Select standard sizes or enter custom inches. Sends directly to <strong>Master M. Naib on WhatsApp (0336-988499)</strong>.
+        </p>
+      </div>
+
+      <div class="workbench-layout-grid">
+        
+        <!-- Left: Form Controls Container -->
+        <div class="workbench-controls-panel">
+          
+          <!-- Mode Tabs -->
+          <div class="sizing-mode-nav">
+            <button class="sizing-nav-tab active" id="tabStandard" onclick="switchOrderMode('standard')">
+              <i class="fa-solid fa-shirt"></i> <span data-i18n="tab_standard">Standard Sizes (S, M, L, XL, XXL)</span>
+            </button>
+            <button class="sizing-nav-tab" id="tabCustom" onclick="switchOrderMode('custom')">
+              <i class="fa-solid fa-ruler"></i> <span data-i18n="tab_custom">Custom Inches Naap (کسٹم ناپ)</span>
+            </button>
+          </div>
+
+          <!-- 1. Garment Selector -->
+          <div class="form-fieldset-block">
+            <label class="fieldset-label" data-i18n="step1_title">1. Select Garment Type (کپڑے کی قسم)</label>
+            <div class="garment-selection-pills">
+              <button type="button" class="garment-pill active" data-garment="Shalwar Kameez" onclick="setGarment('Shalwar Kameez', 1500)">
+                <i class="fa-solid fa-vest"></i> <span>Shalwar Kameez</span>
+              </button>
+              <button type="button" class="garment-pill" data-garment="Executive Waistcoat (Waskat)" onclick="setGarment('Executive Waistcoat (Waskat)', 2500)">
+                <i class="fa-solid fa-vest-patches"></i> <span>Executive Waistcoat</span>
+              </button>
+              <button type="button" class="garment-pill" data-garment="Kurta Trouser" onclick="setGarment('Kurta Trouser', 1300)">
+                <i class="fa-solid fa-shirt"></i> <span>Kurta Trouser</span>
+              </button>
+              <button type="button" class="garment-pill" data-garment="Bespoke 2-Piece Suit" onclick="setGarment('Bespoke 2-Piece Suit', 7500)">
+                <i class="fa-solid fa-user-tie"></i> <span>2-Piece Suit</span>
+              </button>
+              <button type="button" class="garment-pill" data-garment="Prince Coat" onclick="setGarment('Prince Coat', 4500)">
+                <i class="fa-solid fa-gem"></i> <span>Prince Coat</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2A. Standard Sizes Pane -->
+          <div id="standardSizeView" class="sizing-mode-pane">
+            <label class="fieldset-label" data-i18n="step2_standard_title">2. Choose Your Standard Size</label>
+            <div class="size-boxes-row">
+              <button type="button" class="size-box-btn" data-size="Small (S)" onclick="setSize('Small (S)')">S (Small)</button>
+              <button type="button" class="size-box-btn active" data-size="Medium (M)" onclick="setSize('Medium (M)')">M (Medium)</button>
+              <button type="button" class="size-box-btn" data-size="Large (L)" onclick="setSize('Large (L)')">L (Large)</button>
+              <button type="button" class="size-box-btn" data-size="Extra Large (XL)" onclick="setSize('Extra Large (XL)')">XL (Extra Large)</button>
+              <button type="button" class="size-box-btn" data-size="XXL" onclick="setSize('XXL')">XXL</button>
+            </div>
+            <div class="standard-size-summary-box" id="standardSizeSummary">
+              <i class="fa-solid fa-circle-info"></i>
+              <span><strong>Medium (M) Specs:</strong> Length: 40" | Chest: 22" | Shoulder: 18" | Sleeve: 24" | Ban: 15.5" | Shalwar: 39"</span>
+            </div>
+          </div>
+
+          <!-- 2B. Custom Inches Inputs Pane -->
+          <div id="customSizeView" class="sizing-mode-pane is-hidden">
+            <label class="fieldset-label" data-i18n="step2_custom_title">2. Enter Measurements in Inches (انچ درج کریں)</label>
+            <div class="inches-inputs-grid">
+              <div class="input-cell">
+                <span class="cell-label">Length (لمبائی)</span>
+                <div class="cell-field">
+                  <input type="number" id="mLength" placeholder="40" min="30" max="55" step="0.5" value="40" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Chest (چھاتی)</span>
+                <div class="cell-field">
+                  <input type="number" id="mChest" placeholder="22" min="15" max="35" step="0.5" value="22" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Shoulder / Teera (تیرا)</span>
+                <div class="cell-field">
+                  <input type="number" id="mShoulder" placeholder="18" min="14" max="25" step="0.5" value="18" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Sleeve / Aasteen (آستین)</span>
+                <div class="cell-field">
+                  <input type="number" id="mSleeve" placeholder="24" min="18" max="30" step="0.5" value="24" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Collar / Ban (گلا / کالر)</span>
+                <div class="cell-field">
+                  <input type="number" id="mCollar" placeholder="15.5" min="12" max="22" step="0.5" value="15.5" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Shalwar Length (شلوار لمبائی)</span>
+                <div class="cell-field">
+                  <input type="number" id="mShalwar" placeholder="39" min="30" max="55" step="0.5" value="39" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Poncha (پائینچہ)</span>
+                <div class="cell-field">
+                  <input type="number" id="mPoncha" placeholder="8.5" min="6" max="12" step="0.5" value="8.5" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Daman / Ghera (دامن)</span>
+                <div class="cell-field">
+                  <input type="number" id="mDaman" placeholder="23" min="18" max="32" step="0.5" value="23" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+            </div>
+            <p class="inches-hint"><i class="fa-solid fa-lightbulb gold-text"></i> Note: If you don't know exact numbers, you can send an old well-fitting suit to our shop in Kohat City or select standard size.</p>
+          </div>
+
+          <!-- 3. Styling Preferences -->
+          <div class="form-fieldset-block">
+            <label class="fieldset-label" data-i18n="step3_title">3. Custom Styling Preferences (ڈیزائننگ)</label>
+            <div class="style-dropdowns-grid">
+              <div class="dropdown-item">
+                <label data-i18n="lbl_collar">Collar / Ban Style</label>
+                <select id="optCollar" class="ui-select" onchange="updateOrderSummary()">
+                  <option value="Sherwani Ban (شیروانی بین)">Sherwani Ban (شیروانی بین)</option>
+                  <option value="Classic Shirt Collar (شرٹ کالر)">Classic Shirt Collar (شرٹ کالر)</option>
+                  <option value="French Cut Collar (فرینچ کٹ بین)">French Cut Collar (فرینچ کٹ بین)</option>
+                  <option value="Kurta Gala (سادہ کرتا گلا)">Kurta Gala (سادہ کرتا گلا)</option>
+                </select>
+              </div>
+              <div class="dropdown-item">
+                <label data-i18n="lbl_cuffs">Sleeve / Cuff Style</label>
+                <select id="optCuff" class="ui-select" onchange="updateOrderSummary()">
+                  <option value="Button Cuff (کف بٹن والا)">Button Cuff (کف بٹن والا)</option>
+                  <option value="Open Simple Sleeve (سادہ کھلا بازو)">Open Simple Sleeve (سادہ کھلا بازو)</option>
+                  <option value="Double Cuff for Cufflinks (ڈبل کف)">Double Cuff for Cufflinks</option>
+                </select>
+              </div>
+              <div class="dropdown-item">
+                <label data-i18n="lbl_daman">Daman Shape</label>
+                <select id="optDaman" class="ui-select" onchange="updateOrderSummary()">
+                  <option value="Choras / Square Daman (چورس دامن)">Choras / Square Daman (چورس دامن)</option>
+                  <option value="Gool / Round Daman (گول دامن)">Gool / Round Daman (گول دامن)</option>
+                </select>
+              </div>
+              <div class="dropdown-item">
+                <label data-i18n="lbl_pockets">Pockets Configuration</label>
+                <select id="optPockets" class="ui-select" onchange="updateOrderSummary()">
+                  <option value="Front Pocket + 2 Side Pockets + Mobile Slot">Front Pocket + 2 Side Pockets + Mobile Slot</option>
+                  <option value="Only 2 Side Pockets (No Front)">Only 2 Side Pockets (No Front)</option>
+                  <option value="Standard Traditional 2 Pockets">Standard Traditional 2 Pockets</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Turnaround Speed -->
+          <div class="form-fieldset-block">
+            <label class="fieldset-label" data-i18n="step4_title">4. Stitching Speed (ڈلیوری کی رفتار)</label>
+            <div class="speed-cards-row">
+              <label class="speed-option-card active" data-speed="standard" onclick="setSpeed('standard')">
+                <input type="radio" name="deliverySpeed" value="standard" checked>
+                <div class="option-details">
+                  <span class="option-title"><i class="fa-regular fa-calendar-check"></i> <span data-i18n="speed_std_title">Standard Delivery</span></span>
+                  <span class="option-time" data-i18n="speed_std_time">3 - 5 Working Days</span>
+                  <span class="option-fee" data-i18n="speed_std_fee">Regular Rate</span>
+                </div>
+              </label>
+              <label class="speed-option-card" data-speed="express" onclick="setSpeed('express')">
+                <input type="radio" name="deliverySpeed" value="express">
+                <div class="option-details">
+                  <span class="option-title"><i class="fa-solid fa-bolt"></i> <span data-i18n="speed_urg_title">Urgent Express Delivery</span></span>
+                  <span class="option-time" data-i18n="speed_urg_time">24 - 48 Hours Priority</span>
+                  <span class="option-fee" data-i18n="speed_urg_fee">+ Rs. 500 Express Surcharge</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- 5. Customer Contact Info -->
+          <div class="form-fieldset-block">
+            <label class="fieldset-label" data-i18n="step5_title">5. Your Contact Information (رابطہ تفصیلات)</label>
+            <div class="customer-fields-row">
+              <input type="text" id="custName" class="ui-input" placeholder="Your Full Name (e.g. Tariq Khan)" data-i18n-ph="ph_name" oninput="updateOrderSummary()">
+              <input type="tel" id="custPhone" class="ui-input" placeholder="WhatsApp / Phone (e.g. 0333-1234567)" data-i18n-ph="ph_phone" oninput="updateOrderSummary()">
+            </div>
+            <textarea id="custNotes" class="ui-textarea" placeholder="Special instructions (e.g. tight fit, loose armhole, fabric brand)..." data-i18n-ph="ph_notes" rows="2" oninput="updateOrderSummary()"></textarea>
+          </div>
+
+        </div>
+
+        <!-- Right: Sticky Live Summary & WhatsApp Dispatch Panel -->
+        <div class="workbench-summary-panel">
+          <div class="summary-receipt-box">
+            
+            <div class="receipt-header">
+              <div class="receipt-icon-wrap">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+              <div class="receipt-title-wrap">
+                <h3 class="receipt-main-title" data-i18n="rcpt_heading">LIVE ORDER SUMMARY</h3>
+                <span class="receipt-sub-title" data-i18n="rcpt_sub">Direct Kohat Atelier Dispatch</span>
+              </div>
+            </div>
+
+            <div class="receipt-table-rows">
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_garment">Garment:</span>
+                <span class="row-value" id="sumGarment">Shalwar Kameez</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_fit">Fitting Mode:</span>
+                <span class="row-value" id="sumSizeMode">Standard Size: Medium (M)</span>
+              </div>
+              <div class="receipt-row" id="sumSpecsRow">
+                <span class="row-label">Measurements:</span>
+                <span class="row-value" id="sumSpecs">L: 40" | Chest: 22" | Sh: 18" | Sl: 24"</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_collar">Collar / Ban:</span>
+                <span class="row-value" id="sumCollar">Sherwani Ban</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_cuffs">Cuffs:</span>
+                <span class="row-value" id="sumCuff">Button Cuff</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_daman">Daman:</span>
+                <span class="row-value" id="sumDaman">Choras / Square Daman</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_time">Delivery Time:</span>
+                <span class="row-value" id="sumSpeed">Standard (3-5 Days)</span>
+              </div>
+
+              <div class="receipt-divider"></div>
+
+              <div class="receipt-row total-amount-row">
+                <span class="total-label" data-i18n="rcpt_lbl_total">Estimated Total:</span>
+                <span class="total-figure" id="sumPrice">Rs. 1,500</span>
+              </div>
+              
+              <div class="receipt-assurance">
+                <i class="fa-solid fa-circle-check gold-text"></i>
+                <span>Direct consultation with Master M. Naib included.</span>
+              </div>
+            </div>
+
+            <div class="receipt-actions">
+              <button class="dispatch-whatsapp-btn" id="btnSendWhatsApp" onclick="dispatchWhatsAppOrder()">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-i18n="btn_dispatch_wa">Send Order to WhatsApp (0336-988499)</span>
+              </button>
+              
+              <div class="direct-call-hint">
+                <span data-i18n="rcpt_call_pref">Prefer calling directly?</span>
+                <a href="tel:0336988499" class="gold-phone-link">
+                  <i class="fa-solid fa-phone"></i> 0336-988499
+                </a>
+              </div>
+            </div>
+
+            <div class="guarantee-ribbon-card">
+              <i class="fa-solid fa-shield-halved ribbon-icon"></i>
+              <div class="ribbon-text">
+                <strong data-i18n="rcpt_guarantee_title">Master M. Naib Guarantee</strong>
+                <p data-i18n="rcpt_guarantee_text">Free alteration adjustment if fitting isn't 100% to your satisfaction.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. TRANSPARENT STITCHING RATES CLASS: .rates-module
+       ========================================================================= -->
+  <section class="rates-module" id="rates">
+    <div class="container">
+      
+      <div class="section-title-block text-center">
+        <span class="section-label" data-i18n="nav_rates">Rate List</span>
+        <h2 class="section-heading" data-i18n="page_rates_heading">Stitching Rates &amp; Delivery Schedule</h2>
+        <div class="gold-rule-line"></div>
+        <p class="section-description" data-i18n="page_rates_tagline">
+          Transparent craftsmanship fees with zero hidden charges. Precision cutting and premium imported Bukram fusing in Kohat City, KPK.
+        </p>
+      </div>
+
+      <div class="rates-table-container">
+        <table class="rates-styled-table">
+          <thead>
+            <tr>
+              <th data-i18n="th_garment">Garment / Service</th>
+              <th data-i18n="th_specs">Description &amp; Inclusions</th>
+              <th data-i18n="th_time">Turnaround Time</th>
+              <th data-i18n="th_rate">Stitching Rate</th>
+              <th data-i18n="th_action">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="table-garment-title">
+                  <i class="fa-solid fa-vest gold-text"></i>
+                  <strong>Men's Shalwar Kameez (Single Stitch)</strong>
+                </div>
+              </td>
+              <td>Standard cut, premium Bukram ban collar, side pockets, durable buttons</td>
+              <td>3 - 4 Days</td>
+              <td><span class="table-price-badge">Rs. 1,200 – 1,400</span></td>
+              <td>
+                <button class="table-select-btn" onclick="selectServiceForOrder('Shalwar Kameez')" data-i18n="th_action">Select</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-garment-title">
+                  <i class="fa-solid fa-vest gold-text"></i>
+                  <strong>Executive Shalwar Kameez (Double Stitch / Designer)</strong>
+                </div>
+              </td>
+              <td>Double needle work, fancy cuff links cut, reinforced mobile pocket, luxury thread</td>
+              <td>3 - 5 Days</td>
+              <td><span class="table-price-badge">Rs. 1,500 – 1,800</span></td>
+              <td>
+                <button class="table-select-btn" onclick="selectServiceForOrder('Shalwar Kameez (Double Stitch)')" data-i18n="th_action">Select</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-garment-title">
+                  <i class="fa-solid fa-vest-patches gold-text"></i>
+                  <strong>Executive Waistcoat (Waskat)</strong>
+                </div>
+              </td>
+              <td>Full canvas interlining, silky inner lining, brass/metallic buttons, welt pockets</td>
+              <td>4 - 6 Days</td>
+              <td><span class="table-price-badge">Rs. 2,000 – 3,000</span></td>
+              <td>
+                <button class="table-select-btn" onclick="selectServiceForOrder('Executive Waistcoat')" data-i18n="th_action">Select</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-garment-title">
+                  <i class="fa-solid fa-shirt gold-text"></i>
+                  <strong>Kurta Pajama / Trouser Cut</strong>
+                </div>
+              </td>
+              <td>Casual or ceremonial cuts, latha or linen fabrics, tailored cuffs &amp; daman</td>
+              <td>3 - 4 Days</td>
+              <td><span class="table-price-badge">Rs. 1,200 – 1,500</span></td>
+              <td>
+                <button class="table-select-btn" onclick="selectServiceForOrder('Kurta Trouser')" data-i18n="th_action">Select</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-garment-title">
+                  <i class="fa-solid fa-user-tie gold-text"></i>
+                  <strong>Bespoke 2-Piece Suit (Coat + Pant)</strong>
+                </div>
+              </td>
+              <td>Bespoke tailoring, lapel customization, imported canvas, trousers with pleats/flat front</td>
+              <td>7 - 10 Days</td>
+              <td><span class="table-price-badge">Rs. 6,500 – 8,500</span></td>
+              <td>
+                <button class="table-select-btn" onclick="selectServiceForOrder('Bespoke Suit')" data-i18n="th_action">Select</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-garment-title">
+                  <i class="fa-solid fa-gem gold-text"></i>
+                  <strong>Prince Coat / Sherwani Stitching</strong>
+                </div>
+              </td>
+              <td>Ceremonial groom &amp; wedding wear, stiff regal ban collar, customized ornamental styling</td>
+              <td>7 - 12 Days</td>
+              <td><span class="table-price-badge">Rs. 4,500 – 7,500</span></td>
+              <td>
+                <button class="table-select-btn" onclick="selectServiceForOrder('Prince Coat')" data-i18n="th_action">Select</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="table-garment-title">
+                  <i class="fa-solid fa-scissors gold-text"></i>
+                  <strong>Alterations &amp; Fitting Adjustments</strong>
+                </div>
+              </td>
+              <td>Chest reduction, length resizing, sleeve tightening, waist fitting on ready-made suits</td>
+              <td>Same Day / 24h</td>
+              <td><span class="table-price-badge">Rs. 300 – 800</span></td>
+              <td>
+                <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.%20Naib,%20I%20have%20an%20alteration%20job." target="_blank" class="table-select-btn" rel="noopener">Inquire</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rates-disclaimer-box">
+        <i class="fa-solid fa-circle-info gold-text"></i>
+        <span data-i18n="rates_disclaimer_text">Fabric is provided by client. All rates include imported anti-bubble Bukram, high-tensile threads, buttons, inner pocket linings, and steam pressing. Express urgent completion (24-48h) is available for +Rs. 500.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. WHY CHOOSE MASTER NAIB CLASS: .standards-module
+       ========================================================================= -->
+  <section class="standards-module" id="why-us">
+    <div class="container">
+      
+      <div class="section-title-block text-center">
+        <span class="section-label" data-i18n="standards_label">THE STANDARDS OF MASTER NAIB</span>
+        <h2 class="section-heading" data-i18n="standards_heading">Why Kohat Chooses M. Naib</h2>
+        <div class="gold-rule-line"></div>
+        <p class="section-description" data-i18n="standards_desc">
+          We maintain rigorous tailoring standards that elevate your wardrobe beyond standard neighborhood shops.
+        </p>
+      </div>
+
+      <div class="standards-cards-grid">
+        <div class="standard-feature-card">
+          <div class="standard-card-icon">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <h3 data-i18n="std_1_title">Master Hand Cutting</h3>
+          <p data-i18n="std_1_desc">Every cloth is marked by tailor chalk and cut individually according to each client's unique shoulders, chest curvature, and height.</p>
+        </div>
+
+        <div class="standard-feature-card">
+          <div class="standard-card-icon">
+            <i class="fa-solid fa-temperature-arrow-up"></i>
+          </div>
+          <h3 data-i18n="std_2_title">Anti-Bubble Thermo-Fused Bukram</h3>
+          <p data-i18n="std_2_desc">Say goodbye to wavy, wrinkled collars after one wash. We use authentic imported thermo-fused interlinings that maintain crisp structure indefinitely.</p>
+        </div>
+
+        <div class="standard-feature-card">
+          <div class="standard-card-icon">
+            <i class="fa-solid fa-hand-holding-hand"></i>
+          </div>
+          <h3 data-i18n="std_3_title">Guaranteed Free Alterations</h3>
+          <p data-i18n="std_3_desc">We stand behind our work. If you feel any stitch or fit needs slight fine-tuning after your trial, we adjust it promptly with no extra charge.</p>
+        </div>
+
+        <div class="standard-feature-card">
+          <div class="standard-card-icon">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3 data-i18n="std_4_title">Commitment to Delivery Dates</h3>
+          <p data-i18n="std_4_desc">No endless excuses or delayed promises. When Master M. Naib gives you an Eid, wedding, or delivery date, your suit is ready on time.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. TESTIMONIALS CLASS: .testimonials-module
+       ========================================================================= -->
+  <section class="testimonials-module">
+    <div class="container">
+      
+      <div class="section-title-block text-center">
+        <span class="section-label" data-i18n="testimonials_label">CLIENT REVIEWS</span>
+        <h2 class="section-heading" data-i18n="testimonials_heading">Trusted Across Kohat &amp; KPK</h2>
+        <div class="gold-rule-line"></div>
+      </div>
+
+      <div class="reviews-cards-grid">
+        <div class="review-quote-card">
+          <div class="star-rating-row">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text" data-i18n="review_1_text">
+            "Master M. Naib stitched 4 Shalwar Kameez suits and a waistcoat for my brother's wedding. The collar finish and shoulder fit are genuinely top tier. Best tailor in Kohat City."
+          </p>
+          <div class="reviewer-profile-row">
+            <div class="reviewer-avatar">TK</div>
+            <div class="reviewer-meta">
+              <span class="reviewer-name" data-i18n="review_1_name">Tariq Khan Afridi</span>
+              <span class="reviewer-loc" data-i18n="review_1_loc">Kohat Cantt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-quote-card">
+          <div class="star-rating-row">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text" data-i18n="review_2_text">
+            "I sent my measurements through WhatsApp as I was traveling from Peshawar. The suit was ready exactly on the date promised and fitted like a glove without even a first trial."
+          </p>
+          <div class="reviewer-profile-row">
+            <div class="reviewer-avatar">MS</div>
+            <div class="reviewer-meta">
+              <span class="reviewer-name" data-i18n="review_2_name">Muhammad Saeed</span>
+              <span class="reviewer-loc" data-i18n="review_2_loc">KDA Kohat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-quote-card">
+          <div class="star-rating-row">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text" data-i18n="review_3_text">
+            "Clean stitching, no unnecessary delays, and very courteous master. The Bukram quality is especially impressive; washed my suits multiple times and collars are still crisp."
+          </p>
+          <div class="reviewer-profile-row">
+            <div class="reviewer-avatar">IK</div>
+            <div class="reviewer-meta">
+              <span class="reviewer-name" data-i18n="review_3_name">Inamullah Khattak</span>
+              <span class="reviewer-loc" data-i18n="review_3_loc">Bannu Road, Kohat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. CONTACT & LOCATION CLASS: .contact-module
+       ========================================================================= -->
+  <section class="contact-module" id="contact">
+    <div class="container">
+      
+      <div class="section-title-block text-center">
+        <span class="section-label" data-i18n="contact_label">VISIT OUR SHOP</span>
+        <h2 class="section-heading" data-i18n="contact_heading">Contact &amp; Shop Location</h2>
+        <div class="gold-rule-line"></div>
+        <p class="section-description" data-i18n="contact_desc">
+          Visit Master M. Naib's workshop in Kohat City, KPK or reach out directly for appointments, fabric advice, and inquiries.
+        </p>
+      </div>
+
+      <div class="contact-layout-grid">
+        
+        <!-- Info Cards Column -->
+        <div class="contact-info-column">
+          
+          <!-- Shop Reception & Counter Image Display -->
+          <div class="shop-counter-feature-card">
+            <div class="counter-feature-img-frame">
+              <img src="assets/images/shop_counter.jpg" alt="M. Naib Tailor Shop Counter in Kohat City KPK" class="counter-feature-img">
+            </div>
+            <div class="counter-feature-tag">
+              <i class="fa-solid fa-store gold-text"></i>
+              <span data-i18n="counter_feature_title">Main Shop Counter &bull; Kohat City</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="tile-content">
+              <h4 data-i18n="contact_owner_role">Master Craftsman &amp; Owner</h4>
+              <p class="tile-highlight" data-i18n="floating_tag_name">Master M. Naib</p>
+              <span data-i18n="contact_owner_sub">Chief Cutter &amp; Bespoke Consultant</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="tile-content">
+              <h4 data-i18n="contact_phone_title">Direct Phone / Call</h4>
+              <a href="tel:0336988499" class="tile-highlight link-gold">0336-988499</a>
+              <span data-i18n="contact_phone_sub">Available for direct calls &amp; urgent orders</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="tile-content">
+              <h4 data-i18n="contact_wa_title">WhatsApp Instant Chat</h4>
+              <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.%20Naib,%20I%20want%20to%20discuss%20stitching." target="_blank" class="tile-highlight link-gold" rel="noopener">0336-988499</a>
+              <span data-i18n="contact_wa_sub">Send photos of cloth, designs &amp; sizes anytime</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="tile-content">
+              <h4 data-i18n="contact_loc_title">Shop Location</h4>
+              <p class="tile-highlight" data-i18n="contact_loc_desc">Kohat City, Khyber Pakhtunkhwa (KPK)</p>
+              <span data-i18n="contact_loc_sub">Easily accessible central location in Kohat</span>
+            </div>
+          </div>
+
+          <div class="info-tile-card">
+            <div class="tile-icon-box">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div class="tile-content">
+              <h4 data-i18n="contact_hours_title">Working Hours</h4>
+              <p class="tile-highlight" data-i18n="contact_hours_time">Saturday – Thursday: 9:00 AM – 9:00 PM</p>
+              <span data-i18n="contact_hours_friday">Friday: 3:00 PM – 9:00 PM (After Juma)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Inquiry Form Column -->
+        <div class="contact-form-column">
+          <div class="inquiry-form-card">
+            <h3 class="inquiry-title" data-i18n="inquiry_form_title">Send a Direct Message / Inquire</h3>
+            <p class="inquiry-subtitle" data-i18n="inquiry_form_sub">Master M. Naib will receive your inquiry directly on WhatsApp or phone.</p>
+
+            <form id="contactInquiryForm" onsubmit="handleDirectInquiry(event)">
+              <div class="ui-form-group">
+                <label for="inqName" data-i18n="inq_lbl_name">Your Name *</label>
+                <input type="text" id="inqName" required placeholder="e.g. Tariq Mehmood" data-i18n-ph="inq_ph_name" class="form-text-input">
+              </div>
+
+              <div class="ui-form-group">
+                <label for="inqPhone" data-i18n="inq_lbl_phone">Your Mobile / WhatsApp Number *</label>
+                <input type="tel" id="inqPhone" required placeholder="03XXXXXXXXX" data-i18n-ph="inq_ph_phone" class="form-text-input">
+              </div>
+
+              <div class="ui-form-group">
+                <label for="inqGarment" data-i18n="inq_lbl_garment">Garment Type Needed</label>
+                <select id="inqGarment" class="form-text-input">
+                  <option value="Men's Shalwar Kameez">Men's Shalwar Kameez (شلوار قمیض)</option>
+                  <option value="Executive Waistcoat">Executive Waistcoat (واسکٹ)</option>
+                  <option value="Bespoke Suit (2-Piece / 3-Piece)">Bespoke Suit (کوٹ پینٹ)</option>
+                  <option value="Kurta Pajama">Kurta Pajama (کرتا پاجامہ)</option>
+                  <option value="Prince Coat / Sherwani">Prince Coat / Sherwani (پرنس کوٹ)</option>
+                  <option value="Urgent Alteration">Urgent Alteration / Fitting</option>
+                </select>
+              </div>
+
+              <div class="ui-form-group">
+                <label for="inqMessage" data-i18n="inq_lbl_msg">Your Message / Fabric Details</label>
+                <textarea id="inqMessage" rows="3" placeholder="Tell us about your fabric, event date or specific requirements..." data-i18n-ph="inq_ph_msg" class="form-text-input"></textarea>
+              </div>
+
+              <button type="submit" class="submit-inquiry-btn">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-i18n="inq_btn_submit">Send Inquiry via WhatsApp</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. FOOTER CLASS: .footer-module
+       ========================================================================= -->
+  <footer class="footer-module">
+    <div class="container">
+      
+      <div class="footer-top-columns">
+        <div class="footer-identity-col">
+          <div class="footer-brand-title">
+            <i class="fa-solid fa-scissors gold-text"></i>
+            <span>M. NAIB TAILORS</span>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer_desc">
+            Excellence in bespoke men's tailoring, traditional Shalwar Kameez, Waistcoats, and Suits. Serving gentlemen across Kohat City and Khyber Pakhtunkhwa with unmatched dedication.
+          </p>
+          <div class="footer-urdu-tag">
+            <span data-i18n="footer_urdu_tag">ماسٹر نائب ٹیلرز • کوہاٹ شہر، خیبر پختونخوا</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-header" data-i18n="footer_services">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#services" data-i18n="srv_sk_title">Men's Shalwar Kameez</a></li>
+            <li><a href="#services" data-i18n="srv_waskat_title">Executive Waistcoats (Waskat)</a></li>
+            <li><a href="#services" data-i18n="srv_suit_title">Bespoke 2-Piece &amp; 3-Piece Suits</a></li>
+            <li><a href="#services" data-i18n="srv_kurta_title">Kurta Pajama &amp; Trousers</a></li>
+            <li><a href="#services" data-i18n="srv_prince_title">Prince Coats &amp; Sherwanis</a></li>
+            <li><a href="#services" data-i18n="srv_urgent_title">Express 24-48h Stitching</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4 class="footer-col-header" data-i18n="footer_contact_hdr">Direct Contact</h4>
+          <div class="footer-contact-details">
+            <p><i class="fa-solid fa-user-tie gold-text"></i> <strong data-i18n="floating_tag_name">Master M. Naib</strong></p>
+            <p><i class="fa-solid fa-phone gold-text"></i> <a href="tel:0336988499">0336-988499</a></p>
+            <p><i class="fa-brands fa-whatsapp gold-text"></i> <a href="https://wa.me/92336988499" target="_blank" rel="noopener">0336-988499</a></p>
+            <p><i class="fa-solid fa-location-dot gold-text"></i> <span data-i18n="top_location">Kohat City, KPK, Pakistan</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p data-i18n="footer_copy">&copy; 2026 M. Naib Tailors, Kohat City, KPK. All Rights Reserved. Bespoke Craftsmanship.</p>
+        <div class="footer-status-pill">
+          <span data-i18n="footer_status">Official Business Profile &bull; Contact: 0336988499</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       12. MOBILE FLOATING ACTION BAR CLASS: .mobile-bar-module
+       ========================================================================= -->
+  <div class="mobile-bar-module" id="mobileActionBar">
+    <a href="tel:0336988499" class="m-float-action m-action-call">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call 0336-988499</span>
+    </a>
+    <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.%20Naib,%20I%20want%20to%20place%20an%20order." target="_blank" class="m-float-action m-action-whatsapp" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp Order</span>
+    </a>
+  </div>
+
+  <!-- =========================================================================
+       13. INTERACTIVE ORDER CONFIRMATION MODAL (.modal-overlay)
+       ========================================================================= -->
+  <div class="modal-overlay" id="orderModalOverlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Close Modal">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-badge-icon">
+          <i class="fa-solid fa-scissors"></i>
+        </div>
+        <div>
+          <h3 class="modal-title">Order Sheet Ready!</h3>
+          <span class="modal-subtitle">Master M. Naib Bespoke Tailors &bull; Kohat City</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-receipt-box" id="modalReceiptContent">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <a href="#" id="modalWhatsAppBtn" target="_blank" class="modal-btn modal-btn-whatsapp" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Send via WhatsApp to M. Naib (0336-988499)</span>
+        </a>
+        <button class="modal-btn modal-btn-copy" onclick="copyOrderSummaryToClipboard()">
+          <i class="fa-solid fa-copy"></i>
+          <span id="copyBtnText">Copy Order Details to Clipboard</span>
+        </button>
+        <a href="tel:0336988499" class="modal-btn modal-btn-call">
+          <i class="fa-solid fa-phone"></i>
+          <span>Call 0336-988499 Directly</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

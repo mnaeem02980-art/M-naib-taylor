@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About &amp; Craftsmanship | M. Naib Master Bespoke Tailors - Kohat City, KPK</title>
+  <meta name="description"
+    content="Meet Master M. Naib in Kohat City, KPK. Master craftsmanship, anatomical pattern cutting, and anti-bubble thermo-fused Bukram for gentlemen who appreciate perfection.">
+
+  <!-- Fonts: Outfit (Luxury Modern UI & Headings) + Plus Jakarta Sans + Noto Nastaliq Urdu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () { try { var t = localStorage.getItem('taylor_active_theme') || 'gold'; document.documentElement.setAttribute('data-theme', t); } catch (e) { } })();
+  </script>
+</head>
+
+<body>
+  <!-- Top Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- =========================================================================
+       0. TOP COLOR THEME CONTROLLER (CYCLE 3 RICH COLOR THEMES)
+       ========================================================================= -->
+  <div class="theme-top-bar" id="themeTopBar">
+    <div class="container theme-top-container">
+      <div class="theme-info-side">
+        <span class="theme-pulse-dot"></span>
+        <span class="theme-bar-label" data-i18n="theme_bar_label">Website Color:</span>
+        <span class="theme-badge-name" id="themeBadgeName">1. Royal Gold (شاہی سنہری)</span>
+      </div>
+
+      <div class="theme-actions-side">
+        <!-- 3-in-1 Cycle Theme Button -->
+        <button type="button" class="theme-cycle-button" id="themeCycleBtn" onclick="cycleTheme()"
+          aria-label="Change Website Color (3 Themes)" title="Click to cycle 3 colors">
+          <i class="fa-solid fa-palette theme-palette-icon"></i>
+          <span class="theme-btn-title" data-i18n="theme_btn_title">Change Color</span>
+          <div class="theme-dots-row" aria-hidden="true">
+            <span class="theme-dot dot-gold active" onclick="event.stopPropagation(); setTheme('gold')"
+              title="1. Royal Gold (شاہی سنہری)"></span>
+            <span class="theme-dot dot-emerald" onclick="event.stopPropagation(); setTheme('emerald')"
+              title="2. Emerald Green (زمرد سبز)"></span>
+            <span class="theme-dot dot-sapphire" onclick="event.stopPropagation(); setTheme('sapphire')"
+              title="3. Sapphire Blue (شاہی نیلا)"></span>
+          </div>
+          <span class="theme-counter-tag" id="themeCounterTag">1 / 3</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Info Bar -->
+  <header class="top-bar-module">
+    <div class="container top-bar-container">
+      <div class="top-bar-location">
+        <i class="fa-solid fa-location-dot gold-text"></i>
+        <span data-i18n="top_location">Kohat City, Khyber Pakhtunkhwa (KPK), Pakistan</span>
+      </div>
+      <div class="top-bar-schedule">
+        <i class="fa-regular fa-clock gold-text"></i>
+        <span data-i18n="top_schedule">Sat – Thu: 9:00 AM – 9:00 PM | Fri: 3:00 PM – 9:00 PM</span>
+      </div>
+      <div class="top-bar-contact">
+        <div class="lang-switcher-pill" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="en" onclick="setLanguage('en')">English</button>
+          <span class="lang-divider">|</span>
+          <button type="button" class="lang-btn" data-lang="ur" onclick="setLanguage('ur')">اردو</button>
+        </div>
+        <a href="tel:0336988499" class="top-bar-phone">
+          <i class="fa-solid fa-phone"></i>
+          <span>0336-988499</span>
+        </a>
+        <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.Naib,%20I%20want%20to%20know%20more%20about%20your%20shop."
+          target="_blank" class="top-bar-whatsapp" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="top_whatsapp">WhatsApp Chat</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Level Navbar -->
+  <nav class="navbar-module" id="mainNavbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="nav-brand-block" aria-label="M. Naib Tailors Home">
+        <div class="nav-brand-monogram">
+          <span class="monogram-letters">MN</span>
+          <div class="scissors-badge"><i class="fa-solid fa-scissors"></i></div>
+        </div>
+        <div class="nav-brand-text">
+          <div class="nav-brand-title">
+            <span class="brand-title-en">M. NAIB</span>
+            <span class="nav-urdu-pill">ماسٹر نائب</span>
+          </div>
+          <span class="nav-brand-caption" data-i18n="brand_sub">MASTER BESPOKE TAILORS &bull; KOHAT</span>
+        </div>
+      </a>
+
+      <div class="nav-menu-list" id="navMenuList">
+        <a href="index.html" class="nav-link-item" data-i18n="nav_home">Home</a>
+        <a href="services.html" class="nav-link-item" data-i18n="nav_services">Services</a>
+        <a href="order.html" class="nav-link-item" data-i18n="nav_order">Naap &amp; Order</a>
+        <a href="rates.html" class="nav-link-item" data-i18n="nav_rates">Rate List</a>
+        <a href="about.html" class="nav-link-item active" data-i18n="nav_about">Our Craft</a>
+        <a href="contact.html" class="nav-link-item" data-i18n="nav_contact">Contact &amp; Shop</a>
+      </div>
+
+      <div class="nav-cta-block">
+        <a href="order.html" class="nav-btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="nav_book">Book Order</span>
+        </a>
+        <button class="nav-hamburger-btn" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <span class="bar-line"></span>
+          <span class="bar-line"></span>
+          <span class="bar-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="page-header-module">
+    <div class="container">
+      <div class="page-breadcrumb">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <span class="crumb-sep">/</span>
+        <span data-i18n="nav_about">Our Craft</span>
+      </div>
+      <h1 class="page-main-heading" data-i18n="page_about_heading">About Master M. Naib &amp; Atelier</h1>
+      <p class="page-tagline" data-i18n="page_about_tagline">
+        Meet <strong>Master M. Naib</strong> and discover the artisan standards that make our bespoke tailoring the
+        premier choice in Kohat City, KPK.
+      </p>
+    </div>
+  </section>
+
+  <!-- Craft Details & Visual Gallery -->
+  <section class="craft-module" id="craft">
+    <div class="container craft-layout-grid">
+
+      <div class="craft-details-column">
+        <span class="section-label" data-i18n="craft_section_label">BESPOKE EXCELLENCE</span>
+        <h2 class="section-heading" data-i18n="craft_section_heading">The Art of Master M. Naib</h2>
+        <div class="gold-rule-line left-aligned"></div>
+
+        <p class="craft-intro-text" data-i18n="craft_intro">
+          With over a decade of hands-on atelier mastery in Kohat City, Master M. Naib has built a sterling reputation
+          among executives, scholars, and wedding parties. We reject generic mass-stitching in favor of individual
+          anatomical draping.
+        </p>
+
+        <div class="craft-features-list">
+          <div class="craft-feature-item">
+            <div class="feature-number-badge">01</div>
+            <div class="feature-text-body">
+              <h4 data-i18n="craft_feat_1_title">Anatomical Pattern Cutting</h4>
+              <p data-i18n="craft_feat_1_desc">Every cloth pattern is drafted according to shoulder slope, chest
+                curvature, and posture to prevent fabric pulling and wrinkles.</p>
+            </div>
+          </div>
+
+          <div class="craft-feature-item">
+            <div class="feature-number-badge">02</div>
+            <div class="feature-text-body">
+              <h4 data-i18n="craft_feat_2_title">Thermo-Fused Anti-Bubble Bukram</h4>
+              <p data-i18n="craft_feat_2_desc">We strictly import high-grade interlinings to ensure collars and cuffs
+                stay razor-sharp wash after wash.</p>
+            </div>
+          </div>
+
+          <div class="craft-feature-item">
+            <div class="feature-number-badge">03</div>
+            <div class="feature-text-body">
+              <h4 data-i18n="craft_feat_3_title">Reinforced Pocket &amp; Button Anchor</h4>
+              <p data-i18n="craft_feat_3_desc">Double-reinforced pocket corners and hand-stitched anchor knots that
+                never tear under daily smartphone weight.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="craft-contact-callout">
+          <div class="callout-text">
+            <strong>Need advice on fabric length or quality?</strong>
+            <span>Call Master M. Naib directly for fabric consultation.</span>
+          </div>
+          <a href="tel:0336988499" class="callout-call-btn">
+            <i class="fa-solid fa-phone"></i>
+            <span>0336-988499</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="craft-images-column">
+        <div class="craft-stacked-cards">
+          <div class="craft-card-top">
+            <img src="assets/images/young_tailor.jpg" alt="Master M. Naib in bespoke tailoring atelier"
+              class="craft-img">
+            <div class="craft-img-caption">
+              <span>Master M. Naib &bull; Precision Cutting Workbench</span>
+            </div>
+          </div>
+          <div class="craft-card-bottom">
+            <img src="assets/images/shop_counter.jpg"
+              alt="M. Naib Tailor Shop Reception and Order Counter in Kohat City KPK" class="craft-img">
+            <div class="craft-img-caption">
+              <span data-i18n="counter_feature_title">Master Cutting &amp; Reception Counter &bull; Kohat City
+                Shop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Standards Grid -->
+  <section class="standards-module" id="why-us">
+    <div class="container">
+
+      <div class="section-title-block text-center">
+        <span class="section-label" data-i18n="standards_label">QUALITY STANDARDS</span>
+        <h2 class="section-heading" data-i18n="standards_heading">Why Kohat Chooses Master M. Naib</h2>
+        <div class="gold-rule-line"></div>
+      </div>
+
+      <div class="standards-cards-grid">
+        <div class="standard-feature-card">
+          <div class="standard-card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+          <h3 data-i18n="std_1_title">100% Fit Guarantee</h3>
+          <p data-i18n="std_1_desc">Every cut is tested against posture measurements. If it doesn't sit right, we adjust
+            it for free.</p>
+        </div>
+
+        <div class="standard-feature-card">
+          <div class="standard-card-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+          <h3 data-i18n="craft_feat_2_title">Thermo-Fused Anti-Bubble Bukram</h3>
+          <p data-i18n="craft_feat_2_desc">We strictly import high-grade interlinings to ensure collars and cuffs stay
+            razor-sharp wash after wash.</p>
+        </div>
+
+        <div class="standard-feature-card">
+          <div class="standard-card-icon"><i class="fa-solid fa-hand-holding-hand"></i></div>
+          <h3 data-i18n="std_3_title">Fine Finishing</h3>
+          <p data-i18n="std_3_desc">Clean blind seams, reinforced stress joints, and immaculate press finish on every
+            item.</p>
+        </div>
+
+        <div class="standard-feature-card">
+          <div class="standard-card-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3 data-i18n="std_2_title">Punctual Handover</h3>
+          <p data-i18n="std_2_desc">We commit to realistic delivery dates and honor them without excuses.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-module">
+    <div class="container">
+
+      <div class="section-title-block text-center">
+        <span class="section-label" data-i18n="testimonials_label">CLIENT REVIEWS</span>
+        <h2 class="section-heading" data-i18n="testimonials_heading">Words from Our Valued Patrons</h2>
+        <div class="gold-rule-line"></div>
+      </div>
+
+      <div class="reviews-cards-grid">
+        <div class="review-quote-card">
+          <div class="star-rating-row">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "Master M. Naib stitched 4 Shalwar Kameez suits and a waistcoat for my brother's wedding. The collar finish
+            and shoulder fit are genuinely top tier. Best tailor in Kohat City."
+          </p>
+          <div class="reviewer-profile-row">
+            <div class="reviewer-avatar">TK</div>
+            <div class="reviewer-meta">
+              <span class="reviewer-name">Tariq Khan Afridi</span>
+              <span class="reviewer-loc">Kohat Cantt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-quote-card">
+          <div class="star-rating-row">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "I sent my measurements through WhatsApp as I was traveling from Peshawar. The suit was ready exactly on the
+            date promised and fitted like a glove without even a first trial."
+          </p>
+          <div class="reviewer-profile-row">
+            <div class="reviewer-avatar">MS</div>
+            <div class="reviewer-meta">
+              <span class="reviewer-name">Muhammad Saeed</span>
+              <span class="reviewer-loc">KDA Kohat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-quote-card">
+          <div class="star-rating-row">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "The Bukram in their collars never bends or wrinkles even after rough washing. Master Naib is an honest
+            craftsman who honors delivery deadlines."
+          </p>
+          <div class="reviewer-profile-row">
+            <div class="reviewer-avatar">AK</div>
+            <div class="reviewer-meta">
+              <span class="reviewer-name">Asadullah Khattak</span>
+              <span class="reviewer-loc">Kohat City</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-module">
+    <div class="container">
+      <div class="footer-top-columns">
+        <div class="footer-identity-col">
+          <div class="footer-brand-title">
+            <i class="fa-solid fa-scissors gold-text"></i>
+            <span>M. NAIB TAILORS</span>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer_desc">
+            Kohat City's premier bespoke tailoring house led by Master M. Naib. Perfection in every stitch,
+            uncompromised fitting, and timely delivery.
+          </p>
+          <div class="footer-urdu-tag">
+            <span>ماسٹر نائب ٹیلرز • کوہاٹ شہر، خیبر پختونخوا</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-header" data-i18n="footer_quick">Quick Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav_services">All Services</a></li>
+            <li><a href="order.html" data-i18n="nav_order">Online Naap Form</a></li>
+            <li><a href="rates.html" data-i18n="nav_rates">Stitching Rate List</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About Master Naib</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact &amp; Shop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4 class="footer-col-header" data-i18n="footer_contact_hdr">Contact &amp; Atelier</h4>
+          <div class="footer-contact-details">
+            <p><i class="fa-solid fa-user-tie gold-text"></i> <strong>Master M. Naib</strong></p>
+            <p><i class="fa-solid fa-phone gold-text"></i> <a href="tel:0336988499">0336-988499</a></p>
+            <p><i class="fa-brands fa-whatsapp gold-text"></i> <a href="https://wa.me/92336988499" target="_blank"
+                rel="noopener">0336-988499</a></p>
+            <p><i class="fa-solid fa-location-dot gold-text"></i> Kohat City, KPK, Pakistan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p data-i18n="footer_copy">&copy; 2026 M. Naib Tailors, Kohat City KPK. All rights reserved.</p>
+        <div class="footer-status-pill">
+          <span data-i18n="footer_status">Kohat City Atelier Active</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Bar -->
+  <div class="mobile-bar-module" id="mobileActionBar">
+    <a href="tel:0336988499" class="m-float-action m-action-call">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call 0336-988499</span>
+    </a>
+    <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.%20Naib,%20I%20want%20to%20place%20an%20order."
+      target="_blank" class="m-float-action m-action-whatsapp" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp Order</span>
+    </a>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="app.js"></script>
+</body>
+
+</html>

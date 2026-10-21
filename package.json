@@ -1,0 +1,13 @@
+{
+  "name": "taylor",
+  "version": "1.0.0",
+  "description": "M. Naib Master Tailors Website",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

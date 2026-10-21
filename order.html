@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naap &amp; Order Form | M. Naib Master Bespoke Tailors - Kohat City, KPK</title>
+  <meta name="description" content="Online Measurement and Stitching Order Form for M. Naib Tailors in Kohat City, KPK. Submit custom naap or standard sizes directly on WhatsApp to 0336988499.">
+  
+  <!-- Fonts: Outfit (Luxury Modern UI & Headings) + Plus Jakarta Sans + Noto Nastaliq Urdu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){try{var t=localStorage.getItem('taylor_active_theme')||'gold';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  </script>
+</head>
+<body>
+  <!-- Top Reading Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- =========================================================================
+       0. TOP COLOR THEME CONTROLLER (CYCLE 3 RICH COLOR THEMES)
+       ========================================================================= -->
+  <div class="theme-top-bar" id="themeTopBar">
+    <div class="container theme-top-container">
+      <div class="theme-info-side">
+        <span class="theme-pulse-dot"></span>
+        <span class="theme-bar-label" data-i18n="theme_bar_label">Website Color:</span>
+        <span class="theme-badge-name" id="themeBadgeName">1. Royal Gold (شاہی سنہری)</span>
+      </div>
+
+      <div class="theme-actions-side">
+        <!-- 3-in-1 Cycle Theme Button -->
+        <button type="button" class="theme-cycle-button" id="themeCycleBtn" onclick="cycleTheme()" aria-label="Change Website Color (3 Themes)" title="Click to cycle 3 colors">
+          <i class="fa-solid fa-palette theme-palette-icon"></i>
+          <span class="theme-btn-title" data-i18n="theme_btn_title">Change Color</span>
+          <div class="theme-dots-row" aria-hidden="true">
+            <span class="theme-dot dot-gold active" onclick="event.stopPropagation(); setTheme('gold')" title="1. Royal Gold (شاہی سنہری)"></span>
+            <span class="theme-dot dot-emerald" onclick="event.stopPropagation(); setTheme('emerald')" title="2. Emerald Green (زمرد سبز)"></span>
+            <span class="theme-dot dot-sapphire" onclick="event.stopPropagation(); setTheme('sapphire')" title="3. Sapphire Blue (شاہی نیلا)"></span>
+          </div>
+          <span class="theme-counter-tag" id="themeCounterTag">1 / 3</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Info Bar -->
+  <header class="top-bar-module">
+    <div class="container top-bar-container">
+      <div class="top-bar-location">
+        <i class="fa-solid fa-location-dot gold-text"></i>
+        <span data-i18n="top_location">Kohat City, Khyber Pakhtunkhwa (KPK), Pakistan</span>
+      </div>
+      <div class="top-bar-schedule">
+        <i class="fa-regular fa-clock gold-text"></i>
+        <span data-i18n="top_schedule">Sat – Thu: 9:00 AM – 9:00 PM | Fri: 3:00 PM – 9:00 PM</span>
+      </div>
+      <div class="top-bar-contact">
+        <div class="lang-switcher-pill" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="en" onclick="setLanguage('en')">English</button>
+          <span class="lang-divider">|</span>
+          <button type="button" class="lang-btn" data-lang="ur" onclick="setLanguage('ur')">اردو</button>
+        </div>
+        <a href="tel:0336988499" class="top-bar-phone">
+          <i class="fa-solid fa-phone"></i>
+          <span>0336-988499</span>
+        </a>
+        <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.Naib,%20I%20want%20to%20send%20my%20measurements." target="_blank" class="top-bar-whatsapp" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="top_whatsapp">WhatsApp Chat</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Level Navbar -->
+  <nav class="navbar-module" id="mainNavbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="nav-brand-block" aria-label="M. Naib Tailors Home">
+        <div class="nav-brand-monogram">
+          <span class="monogram-letters">MN</span>
+          <div class="scissors-badge"><i class="fa-solid fa-scissors"></i></div>
+        </div>
+        <div class="nav-brand-text">
+          <div class="nav-brand-title">
+            <span class="brand-title-en">M. NAIB</span>
+            <span class="nav-urdu-pill">ماسٹر نائب</span>
+          </div>
+          <span class="nav-brand-caption" data-i18n="brand_sub">MASTER BESPOKE TAILORS &bull; KOHAT</span>
+        </div>
+      </a>
+
+      <div class="nav-menu-list" id="navMenuList">
+        <a href="index.html" class="nav-link-item" data-i18n="nav_home">Home</a>
+        <a href="services.html" class="nav-link-item" data-i18n="nav_services">Services</a>
+        <a href="order.html" class="nav-link-item active" data-i18n="nav_order">Naap &amp; Order</a>
+        <a href="rates.html" class="nav-link-item" data-i18n="nav_rates">Rate List</a>
+        <a href="about.html" class="nav-link-item" data-i18n="nav_about">Our Craft</a>
+        <a href="contact.html" class="nav-link-item" data-i18n="nav_contact">Contact &amp; Shop</a>
+      </div>
+
+      <div class="nav-cta-block">
+        <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.%20Naib,%20I%20want%20to%20book%20an%20order." target="_blank" class="nav-btn-whatsapp" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="nav_book">Book Order</span>
+        </a>
+        <button class="nav-hamburger-btn" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+          <span class="bar-line"></span>
+          <span class="bar-line"></span>
+          <span class="bar-line"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header Banner -->
+  <section class="page-header-module">
+    <div class="container">
+      <div class="page-breadcrumb">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <span class="crumb-sep">/</span>
+        <span data-i18n="nav_order">Naap &amp; Order</span>
+      </div>
+      <h1 class="page-main-heading" data-i18n="page_order_heading">Online Measurement &amp; Order Form (ناپ فارم)</h1>
+      <p class="page-tagline" data-i18n="page_order_tagline">
+        Select standard sizes or enter custom inches. Sends directly to <strong>Master M. Naib on WhatsApp (0336-988499)</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Dedicated Measurement Workbench -->
+  <section class="measurement-module" id="measurement">
+    <div class="container">
+
+      <div class="workbench-layout-grid" id="orderFormBlock">
+        
+        <!-- Left: Form Controls Container -->
+        <div class="workbench-controls-panel">
+          
+          <!-- Mode Tabs -->
+          <div class="sizing-mode-nav">
+            <button type="button" class="sizing-nav-tab active" id="tabStandard" onclick="switchOrderMode('standard')">
+              <i class="fa-solid fa-shirt"></i> <span data-i18n="tab_standard">Standard Sizes (S, M, L, XL, XXL)</span>
+            </button>
+            <button type="button" class="sizing-nav-tab" id="tabCustom" onclick="switchOrderMode('custom')">
+              <i class="fa-solid fa-ruler"></i> <span data-i18n="tab_custom">Custom Inches Naap (کسٹم ناپ)</span>
+            </button>
+          </div>
+
+          <!-- 1. Garment Selector -->
+          <div class="form-fieldset-block">
+            <label class="fieldset-label" data-i18n="step1_title">1. Select Garment Type (کپڑے کی قسم)</label>
+            <div class="garment-selection-pills">
+              <button type="button" class="garment-pill active" data-garment="Shalwar Kameez" onclick="setGarment('Shalwar Kameez', 1500)">
+                <i class="fa-solid fa-vest"></i> <span>Shalwar Kameez</span>
+              </button>
+              <button type="button" class="garment-pill" data-garment="Executive Waistcoat (Waskat)" onclick="setGarment('Executive Waistcoat (Waskat)', 2500)">
+                <i class="fa-solid fa-vest-patches"></i> <span>Executive Waistcoat</span>
+              </button>
+              <button type="button" class="garment-pill" data-garment="Kurta Trouser" onclick="setGarment('Kurta Trouser', 1300)">
+                <i class="fa-solid fa-shirt"></i> <span>Kurta Trouser</span>
+              </button>
+              <button type="button" class="garment-pill" data-garment="Bespoke 2-Piece Suit" onclick="setGarment('Bespoke 2-Piece Suit', 7500)">
+                <i class="fa-solid fa-user-tie"></i> <span>2-Piece Suit</span>
+              </button>
+              <button type="button" class="garment-pill" data-garment="Prince Coat" onclick="setGarment('Prince Coat', 4500)">
+                <i class="fa-solid fa-gem"></i> <span>Prince Coat</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2A. Standard Sizes Pane -->
+          <div id="standardSizeView" class="sizing-mode-pane">
+            <label class="fieldset-label" data-i18n="step2_standard_title">2. Choose Your Standard Size</label>
+            <div class="size-boxes-row">
+              <button type="button" class="size-box-btn" data-size="Small (S)" onclick="setSize('Small (S)')">S (Small)</button>
+              <button type="button" class="size-box-btn active" data-size="Medium (M)" onclick="setSize('Medium (M)')">M (Medium)</button>
+              <button type="button" class="size-box-btn" data-size="Large (L)" onclick="setSize('Large (L)')">L (Large)</button>
+              <button type="button" class="size-box-btn" data-size="Extra Large (XL)" onclick="setSize('Extra Large (XL)')">XL (Extra Large)</button>
+              <button type="button" class="size-box-btn" data-size="XXL" onclick="setSize('XXL')">XXL</button>
+            </div>
+            <div class="standard-size-summary-box" id="standardSizeSummary">
+              <i class="fa-solid fa-circle-info"></i>
+              <span><strong>Medium (M) Specs:</strong> Length: 40" | Chest: 22" | Shoulder: 18" | Sleeve: 24" | Ban: 15.5" | Shalwar: 39"</span>
+            </div>
+          </div>
+
+          <!-- 2B. Custom Inches Inputs Pane -->
+          <div id="customSizeView" class="sizing-mode-pane is-hidden">
+            <label class="fieldset-label" data-i18n="step2_custom_title">2. Enter Measurements in Inches (انچ درج کریں)</label>
+            <div class="inches-inputs-grid">
+              <div class="input-cell">
+                <span class="cell-label">Length (لمبائی)</span>
+                <div class="cell-field">
+                  <input type="number" id="mLength" placeholder="40" min="30" max="55" step="0.5" value="40" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Chest (چھاتی)</span>
+                <div class="cell-field">
+                  <input type="number" id="mChest" placeholder="22" min="15" max="35" step="0.5" value="22" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Shoulder / Teera (تیرا)</span>
+                <div class="cell-field">
+                  <input type="number" id="mShoulder" placeholder="18" min="14" max="25" step="0.5" value="18" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Sleeve / Aasteen (آستین)</span>
+                <div class="cell-field">
+                  <input type="number" id="mSleeve" placeholder="24" min="18" max="30" step="0.5" value="24" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Collar / Ban (گلا / کالر)</span>
+                <div class="cell-field">
+                  <input type="number" id="mCollar" placeholder="15.5" min="12" max="22" step="0.5" value="15.5" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Shalwar Length (شلوار لمبائی)</span>
+                <div class="cell-field">
+                  <input type="number" id="mShalwar" placeholder="39" min="30" max="55" step="0.5" value="39" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Poncha (پائینچہ)</span>
+                <div class="cell-field">
+                  <input type="number" id="mPoncha" placeholder="8.5" min="6" max="12" step="0.5" value="8.5" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+              <div class="input-cell">
+                <span class="cell-label">Daman / Ghera (دامن)</span>
+                <div class="cell-field">
+                  <input type="number" id="mDaman" placeholder="23" min="18" max="32" step="0.5" value="23" oninput="updateOrderSummary()">
+                  <span class="unit-text">in</span>
+                </div>
+              </div>
+            </div>
+            <p class="inches-hint"><i class="fa-solid fa-lightbulb gold-text"></i> Note: If you don't know exact numbers, you can send an old well-fitting suit to our shop in Kohat City or select standard size.</p>
+          </div>
+
+          <!-- 3. Styling Preferences -->
+          <div class="form-fieldset-block">
+            <label class="fieldset-label" data-i18n="step3_title">3. Custom Styling Preferences (ڈیزائننگ)</label>
+            <div class="style-dropdowns-grid">
+              <div class="dropdown-item">
+                <label data-i18n="lbl_collar">Collar / Ban Style</label>
+                <select id="optCollar" class="ui-select" onchange="updateOrderSummary()">
+                  <option value="Sherwani Ban (شیروانی بین)">Sherwani Ban (شیروانی بین)</option>
+                  <option value="Classic Shirt Collar (شرٹ کالر)">Classic Shirt Collar (شرٹ کالر)</option>
+                  <option value="French Cut Collar (فرینچ کٹ بین)">French Cut Collar (فرینچ کٹ بین)</option>
+                  <option value="Kurta Gala (سادہ کرتا گلا)">Kurta Gala (سادہ کرتا گلا)</option>
+                </select>
+              </div>
+              <div class="dropdown-item">
+                <label data-i18n="lbl_cuffs">Sleeve / Cuff Style</label>
+                <select id="optCuff" class="ui-select" onchange="updateOrderSummary()">
+                  <option value="Button Cuff (کف بٹن والا)">Button Cuff (کف بٹن والا)</option>
+                  <option value="Open Simple Sleeve (سادہ کھلا بازو)">Open Simple Sleeve (سادہ کھلا بازو)</option>
+                  <option value="Double Cuff for Cufflinks (ڈبل کف)">Double Cuff for Cufflinks</option>
+                </select>
+              </div>
+              <div class="dropdown-item">
+                <label data-i18n="lbl_daman">Daman Shape</label>
+                <select id="optDaman" class="ui-select" onchange="updateOrderSummary()">
+                  <option value="Choras / Square Daman (چورس دامن)">Choras / Square Daman (چورس دامن)</option>
+                  <option value="Gool / Round Daman (گول دامن)">Gool / Round Daman (گول دامن)</option>
+                </select>
+              </div>
+              <div class="dropdown-item">
+                <label data-i18n="lbl_pockets">Pockets Configuration</label>
+                <select id="optPockets" class="ui-select" onchange="updateOrderSummary()">
+                  <option value="Front Pocket + 2 Side Pockets + Mobile Slot">Front Pocket + 2 Side Pockets + Mobile Slot</option>
+                  <option value="Only 2 Side Pockets (No Front)">Only 2 Side Pockets (No Front)</option>
+                  <option value="Standard Traditional 2 Pockets">Standard Traditional 2 Pockets</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Turnaround Speed -->
+          <div class="form-fieldset-block">
+            <label class="fieldset-label" data-i18n="step4_title">4. Stitching Speed (ڈلیوری کی رفتار)</label>
+            <div class="speed-cards-row">
+              <label class="speed-option-card active" data-speed="standard" onclick="setSpeed('standard')">
+                <input type="radio" name="deliverySpeed" value="standard" checked>
+                <div class="option-details">
+                  <span class="option-title"><i class="fa-regular fa-calendar-check"></i> <span data-i18n="speed_std_title">Standard Delivery</span></span>
+                  <span class="option-time" data-i18n="speed_std_time">3 - 5 Working Days</span>
+                  <span class="option-fee" data-i18n="speed_std_fee">Regular Rate</span>
+                </div>
+              </label>
+              <label class="speed-option-card" data-speed="express" onclick="setSpeed('express')">
+                <input type="radio" name="deliverySpeed" value="express">
+                <div class="option-details">
+                  <span class="option-title"><i class="fa-solid fa-bolt"></i> <span data-i18n="speed_urg_title">Urgent Express Delivery</span></span>
+                  <span class="option-time" data-i18n="speed_urg_time">24 - 48 Hours Priority</span>
+                  <span class="option-fee" data-i18n="speed_urg_fee">+ Rs. 500 Express Surcharge</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- 5. Customer Contact Info -->
+          <div class="form-fieldset-block">
+            <label class="fieldset-label" data-i18n="step5_title">5. Your Contact Information (رابطہ تفصیلات)</label>
+            <div class="customer-fields-row">
+              <input type="text" id="custName" class="ui-input" placeholder="Your Full Name (e.g. Tariq Khan)" data-i18n-ph="ph_name" oninput="updateOrderSummary()">
+              <input type="tel" id="custPhone" class="ui-input" placeholder="WhatsApp / Phone (e.g. 0333-1234567)" data-i18n-ph="ph_phone" oninput="updateOrderSummary()">
+            </div>
+            <textarea id="custNotes" class="ui-textarea" placeholder="Special instructions (e.g. tight fit, loose armhole, fabric brand)..." data-i18n-ph="ph_notes" rows="2" oninput="updateOrderSummary()"></textarea>
+          </div>
+
+        </div>
+
+        <!-- Right: Sticky Live Summary & WhatsApp Dispatch Panel -->
+        <div class="workbench-summary-panel">
+          <div class="summary-receipt-box">
+            
+            <div class="receipt-header">
+              <div class="receipt-icon-wrap">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+              <div class="receipt-title-wrap">
+                <h3 class="receipt-main-title" data-i18n="rcpt_heading">LIVE ORDER SUMMARY</h3>
+                <span class="receipt-sub-title" data-i18n="rcpt_sub">Direct Kohat Atelier Dispatch</span>
+              </div>
+            </div>
+
+            <div class="receipt-table-rows">
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_garment">Garment:</span>
+                <span class="row-value" id="sumGarment">Shalwar Kameez</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_fit">Fitting Mode:</span>
+                <span class="row-value" id="sumSizeMode">Standard Size: Medium (M)</span>
+              </div>
+              <div class="receipt-row" id="sumSpecsRow">
+                <span class="row-label">Measurements:</span>
+                <span class="row-value" id="sumSpecs">L: 40" | Chest: 22" | Sh: 18" | Sl: 24"</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_collar">Collar / Ban:</span>
+                <span class="row-value" id="sumCollar">Sherwani Ban</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_cuffs">Cuffs:</span>
+                <span class="row-value" id="sumCuff">Button Cuff</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_daman">Daman:</span>
+                <span class="row-value" id="sumDaman">Choras / Square Daman</span>
+              </div>
+              <div class="receipt-row">
+                <span class="row-label" data-i18n="rcpt_lbl_time">Delivery Time:</span>
+                <span class="row-value" id="sumSpeed">Standard (3-5 Days)</span>
+              </div>
+
+              <div class="receipt-divider"></div>
+
+              <div class="receipt-row total-amount-row">
+                <span class="total-label" data-i18n="rcpt_lbl_total">Estimated Total:</span>
+                <span class="total-figure" id="sumPrice">Rs. 1,500</span>
+              </div>
+              
+              <div class="receipt-assurance">
+                <i class="fa-solid fa-circle-check gold-text"></i>
+                <span>Direct consultation with Master M. Naib included.</span>
+              </div>
+            </div>
+
+            <div class="receipt-actions">
+              <button class="dispatch-whatsapp-btn" id="btnSendWhatsApp" onclick="dispatchWhatsAppOrder()">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-i18n="btn_dispatch_wa">Send Order to WhatsApp (0336-988499)</span>
+              </button>
+              
+              <div class="direct-call-hint">
+                <span data-i18n="rcpt_call_pref">Prefer calling directly?</span>
+                <a href="tel:0336988499" class="gold-phone-link">
+                  <i class="fa-solid fa-phone"></i> 0336-988499
+                </a>
+              </div>
+            </div>
+
+            <div class="guarantee-ribbon-card">
+              <i class="fa-solid fa-shield-halved ribbon-icon"></i>
+              <div class="ribbon-text">
+                <strong data-i18n="rcpt_guarantee_title">Master M. Naib Guarantee</strong>
+                <p data-i18n="rcpt_guarantee_text">Free alteration adjustment if fitting isn't 100% to your satisfaction.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Order Modal -->
+  <div class="modal-overlay" id="orderModalOverlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Close Modal">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-badge-icon">
+          <i class="fa-solid fa-scissors"></i>
+        </div>
+        <div>
+          <h3 class="modal-title">Order Sheet Ready!</h3>
+          <span class="modal-subtitle">Master M. Naib Bespoke Tailors &bull; Kohat City</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-receipt-box" id="modalReceiptContent"></div>
+      </div>
+
+      <div class="modal-actions">
+        <a href="#" id="modalWhatsAppBtn" target="_blank" class="modal-btn modal-btn-whatsapp" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Send via WhatsApp to M. Naib (0336-988499)</span>
+        </a>
+        <button class="modal-btn modal-btn-copy" onclick="copyOrderSummaryToClipboard()">
+          <i class="fa-solid fa-copy"></i>
+          <span id="copyBtnText">Copy Order Details to Clipboard</span>
+        </button>
+        <a href="tel:0336988499" class="modal-btn modal-btn-call">
+          <i class="fa-solid fa-phone"></i>
+          <span>Call 0336-988499 Directly</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-module">
+    <div class="container">
+      <div class="footer-top-columns">
+        <div class="footer-identity-col">
+          <div class="footer-brand-title">
+            <i class="fa-solid fa-scissors gold-text"></i>
+            <span>M. NAIB TAILORS</span>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer_desc">
+            Excellence in bespoke men's tailoring, traditional Shalwar Kameez, Waistcoats, and Suits. Serving gentlemen across Kohat City and KPK.
+          </p>
+          <div class="footer-urdu-tag">
+            <span>ماسٹر نائب ٹیلرز • کوہاٹ شہر، خیبر پختونخوا</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h4 class="footer-col-header" data-i18n="footer_quick">Quick Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="services.html" data-i18n="nav_services">All Services</a></li>
+            <li><a href="order.html" data-i18n="nav_order">Online Naap Form</a></li>
+            <li><a href="rates.html" data-i18n="nav_rates">Stitching Rate List</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About Master Naib</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact &amp; Shop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4 class="footer-col-header" data-i18n="footer_contact_hdr">Contact &amp; Atelier</h4>
+          <div class="footer-contact-details">
+            <p><i class="fa-solid fa-user-tie gold-text"></i> <strong>Master M. Naib</strong></p>
+            <p><i class="fa-solid fa-phone gold-text"></i> <a href="tel:0336988499">0336-988499</a></p>
+            <p><i class="fa-brands fa-whatsapp gold-text"></i> <a href="https://wa.me/92336988499" target="_blank" rel="noopener">0336-988499</a></p>
+            <p><i class="fa-solid fa-location-dot gold-text"></i> Kohat City, KPK, Pakistan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p data-i18n="footer_copy">&copy; 2026 M. Naib Tailors, Kohat City, KPK. All Rights Reserved.</p>
+        <div class="footer-status-pill">
+          <span data-i18n="footer_status">Kohat City Atelier Active</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Floating Bar -->
+  <div class="mobile-bar-module" id="mobileActionBar">
+    <a href="tel:0336988499" class="m-float-action m-action-call">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call 0336-988499</span>
+    </a>
+    <a href="https://wa.me/92336988499?text=Assalam-o-Alaikum%20Master%20M.%20Naib,%20I%20want%20to%20place%20an%20order." target="_blank" class="m-float-action m-action-whatsapp" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp Order</span>
+    </a>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <script src="app.js"></script>
+</body>
+</html>
